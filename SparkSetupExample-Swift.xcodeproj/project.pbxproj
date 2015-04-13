@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5018DC121AD887DC00ADD403 /* rr.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5018DC111AD887DC00ADD403 /* rr.mp4 */; };
+		5018DC171AD88B4D00ADD403 /* Skater Girls Rock.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5018DC161AD88B4D00ADD403 /* Skater Girls Rock.ttf */; };
+		5018DC191AD88BA400ADD403 /* Agentorange.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5018DC181AD88BA400ADD403 /* Agentorange.ttf */; };
+		5018DC1B1AD88C0A00ADD403 /* Cheri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5018DC1A1AD88C0A00ADD403 /* Cheri.ttf */; };
+		50D0956C1AD4ACE9008EDBD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D0956B1AD4ACE9008EDBD7 /* AppDelegate.swift */; };
+		50D0956E1AD4ACE9008EDBD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D0956D1AD4ACE9008EDBD7 /* ViewController.swift */; };
+		50D095711AD4ACE9008EDBD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D0956F1AD4ACE9008EDBD7 /* Main.storyboard */; };
+		50D095731AD4ACE9008EDBD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D095721AD4ACE9008EDBD7 /* Images.xcassets */; };
+		50D095761AD4ACE9008EDBD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D095741AD4ACE9008EDBD7 /* LaunchScreen.xib */; };
+		50D095821AD4ACE9008EDBD7 /* SparkSetupExample_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D095811AD4ACE9008EDBD7 /* SparkSetupExample_SwiftTests.swift */; };
+		AA9E27CBD0D9C0F30B8FB2D3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED513300A28B61313FA63920 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50D0957C1AD4ACE9008EDBD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50D0955E1AD4ACE9008EDBD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50D095651AD4ACE9008EDBD7;
+			remoteInfo = "SparkSetupExample-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4327566CB3C778F52B87BBF1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5018DC111AD887DC00ADD403 /* rr.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rr.mp4; sourceTree = "<group>"; };
+		5018DC161AD88B4D00ADD403 /* Skater Girls Rock.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Skater Girls Rock.ttf"; sourceTree = "<group>"; };
+		5018DC181AD88BA400ADD403 /* Agentorange.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Agentorange.ttf; sourceTree = "<group>"; };
+		5018DC1A1AD88C0A00ADD403 /* Cheri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cheri.ttf; sourceTree = "<group>"; };
+		50D095661AD4ACE9008EDBD7 /* SparkSetupExample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SparkSetupExample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D0956A1AD4ACE9008EDBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50D0956B1AD4ACE9008EDBD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50D0956D1AD4ACE9008EDBD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50D095701AD4ACE9008EDBD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50D095721AD4ACE9008EDBD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		50D095751AD4ACE9008EDBD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		50D0957B1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SparkSetupExample-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D095801AD4ACE9008EDBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50D095811AD4ACE9008EDBD7 /* SparkSetupExample_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkSetupExample_SwiftTests.swift; sourceTree = "<group>"; };
+		50D0958F1AD4B725008EDBD7 /* SparkSetup-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = "SparkSetup-Bridging-Header.h"; sourceTree = "<group>"; };
+		A648C6797549C2930F433A49 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		ED513300A28B61313FA63920 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50D095631AD4ACE9008EDBD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9E27CBD0D9C0F30B8FB2D3 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50D095781AD4ACE9008EDBD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5018DC151AD888EB00ADD403 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5018DC111AD887DC00ADD403 /* rr.mp4 */,
+				5018DC181AD88BA400ADD403 /* Agentorange.ttf */,
+				5018DC1A1AD88C0A00ADD403 /* Cheri.ttf */,
+				5018DC161AD88B4D00ADD403 /* Skater Girls Rock.ttf */,
+				50D095721AD4ACE9008EDBD7 /* Images.xcassets */,
+				50D095741AD4ACE9008EDBD7 /* LaunchScreen.xib */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		50D0955D1AD4ACE8008EDBD7 = {
+			isa = PBXGroup;
+			children = (
+				50D095681AD4ACE9008EDBD7 /* SparkSetupExample-Swift */,
+				50D0957E1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests */,
+				50D095671AD4ACE9008EDBD7 /* Products */,
+				5744F69B0A50B6B9A30BB697 /* Pods */,
+				A29BC9A0AA44DF6712CD050D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		50D095671AD4ACE9008EDBD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50D095661AD4ACE9008EDBD7 /* SparkSetupExample-Swift.app */,
+				50D0957B1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50D095681AD4ACE9008EDBD7 /* SparkSetupExample-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				5018DC151AD888EB00ADD403 /* Assets */,
+				50D0956B1AD4ACE9008EDBD7 /* AppDelegate.swift */,
+				50D0956D1AD4ACE9008EDBD7 /* ViewController.swift */,
+				50D0956F1AD4ACE9008EDBD7 /* Main.storyboard */,
+				50D095691AD4ACE9008EDBD7 /* Supporting Files */,
+			);
+			path = "SparkSetupExample-Swift";
+			sourceTree = "<group>";
+		};
+		50D095691AD4ACE9008EDBD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50D0958F1AD4B725008EDBD7 /* SparkSetup-Bridging-Header.h */,
+				50D0956A1AD4ACE9008EDBD7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50D0957E1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				50D095811AD4ACE9008EDBD7 /* SparkSetupExample_SwiftTests.swift */,
+				50D0957F1AD4ACE9008EDBD7 /* Supporting Files */,
+			);
+			path = "SparkSetupExample-SwiftTests";
+			sourceTree = "<group>";
+		};
+		50D0957F1AD4ACE9008EDBD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50D095801AD4ACE9008EDBD7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5744F69B0A50B6B9A30BB697 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A648C6797549C2930F433A49 /* Pods.debug.xcconfig */,
+				4327566CB3C778F52B87BBF1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A29BC9A0AA44DF6712CD050D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED513300A28B61313FA63920 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50D095651AD4ACE9008EDBD7 /* SparkSetupExample-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50D095851AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "SparkSetupExample-Swift" */;
+			buildPhases = (
+				4C71DBB0C5A2D3ADCBCFD9C6 /* Check Pods Manifest.lock */,
+				50D095621AD4ACE9008EDBD7 /* Sources */,
+				50D095631AD4ACE9008EDBD7 /* Frameworks */,
+				50D095641AD4ACE9008EDBD7 /* Resources */,
+				8BD7C63A2C6FF522AD6DD6A1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SparkSetupExample-Swift";
+			productName = "SparkSetupExample-Swift";
+			productReference = 50D095661AD4ACE9008EDBD7 /* SparkSetupExample-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50D0957A1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50D095881AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "SparkSetupExample-SwiftTests" */;
+			buildPhases = (
+				50D095771AD4ACE9008EDBD7 /* Sources */,
+				50D095781AD4ACE9008EDBD7 /* Frameworks */,
+				50D095791AD4ACE9008EDBD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50D0957D1AD4ACE9008EDBD7 /* PBXTargetDependency */,
+			);
+			name = "SparkSetupExample-SwiftTests";
+			productName = "SparkSetupExample-SwiftTests";
+			productReference = 50D0957B1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50D0955E1AD4ACE9008EDBD7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = spark;
+				TargetAttributes = {
+					50D095651AD4ACE9008EDBD7 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = TNJ67X9MQD;
+					};
+					50D0957A1AD4ACE9008EDBD7 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 50D095651AD4ACE9008EDBD7;
+					};
+				};
+			};
+			buildConfigurationList = 50D095611AD4ACE9008EDBD7 /* Build configuration list for PBXProject "SparkSetupExample-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50D0955D1AD4ACE8008EDBD7;
+			productRefGroup = 50D095671AD4ACE9008EDBD7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50D095651AD4ACE9008EDBD7 /* SparkSetupExample-Swift */,
+				50D0957A1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50D095641AD4ACE9008EDBD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5018DC121AD887DC00ADD403 /* rr.mp4 in Resources */,
+				5018DC1B1AD88C0A00ADD403 /* Cheri.ttf in Resources */,
+				50D095711AD4ACE9008EDBD7 /* Main.storyboard in Resources */,
+				5018DC191AD88BA400ADD403 /* Agentorange.ttf in Resources */,
+				50D095761AD4ACE9008EDBD7 /* LaunchScreen.xib in Resources */,
+				50D095731AD4ACE9008EDBD7 /* Images.xcassets in Resources */,
+				5018DC171AD88B4D00ADD403 /* Skater Girls Rock.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50D095791AD4ACE9008EDBD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C71DBB0C5A2D3ADCBCFD9C6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8BD7C63A2C6FF522AD6DD6A1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50D095621AD4ACE9008EDBD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50D0956E1AD4ACE9008EDBD7 /* ViewController.swift in Sources */,
+				50D0956C1AD4ACE9008EDBD7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50D095771AD4ACE9008EDBD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50D095821AD4ACE9008EDBD7 /* SparkSetupExample_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50D0957D1AD4ACE9008EDBD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50D095651AD4ACE9008EDBD7 /* SparkSetupExample-Swift */;
+			targetProxy = 50D0957C1AD4ACE9008EDBD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50D0956F1AD4ACE9008EDBD7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50D095701AD4ACE9008EDBD7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		50D095741AD4ACE9008EDBD7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50D095751AD4ACE9008EDBD7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50D095831AD4ACE9008EDBD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
+			};
+			name = Debug;
+		};
+		50D095841AD4ACE9008EDBD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50D095861AD4ACE9008EDBD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A648C6797549C2930F433A49 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Spark-SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/SparkSetup\"",
+					"\"${PODS_ROOT}\"/**",
+				);
+				INFOPLIST_FILE = "SparkSetupExample-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		50D095871AD4ACE9008EDBD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4327566CB3C778F52B87BBF1 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Spark-SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/SparkSetup\"",
+					"\"${PODS_ROOT}\"/**",
+				);
+				INFOPLIST_FILE = "SparkSetupExample-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		50D095891AD4ACE9008EDBD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SparkSetupExample-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SparkSetupExample-Swift.app/SparkSetupExample-Swift";
+			};
+			name = Debug;
+		};
+		50D0958A1AD4ACE9008EDBD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SparkSetupExample-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SparkSetupExample-Swift.app/SparkSetupExample-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50D095611AD4ACE9008EDBD7 /* Build configuration list for PBXProject "SparkSetupExample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50D095831AD4ACE9008EDBD7 /* Debug */,
+				50D095841AD4ACE9008EDBD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50D095851AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "SparkSetupExample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50D095861AD4ACE9008EDBD7 /* Debug */,
+				50D095871AD4ACE9008EDBD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50D095881AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "SparkSetupExample-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50D095891AD4ACE9008EDBD7 /* Debug */,
+				50D0958A1AD4ACE9008EDBD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50D0955E1AD4ACE9008EDBD7 /* Project object */;
+}

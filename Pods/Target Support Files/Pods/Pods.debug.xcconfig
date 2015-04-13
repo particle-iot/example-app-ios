@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Spark-SDK" "${PODS_ROOT}/Headers/Public/SparkSetup"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/Spark-SDK" -isystem "${PODS_ROOT}/Headers/Public/SparkSetup"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-AFNetworking" -l"Pods-Spark-SDK" -l"Pods-SparkSetup" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods
