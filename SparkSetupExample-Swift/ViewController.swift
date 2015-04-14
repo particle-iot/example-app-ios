@@ -20,13 +20,15 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // Function will be called when setup finishes
     func sparkSetupViewController(controller: SparkSetupMainController!, didFinishWithResult result: SparkSetupMainControllerResult, device: SparkDevice!) {
         
         switch result
         {
-        case .Success: println("Setup completed successfully")
-        case .Failure: println("Setup failed")
-        case .UserCancel : println("User cancelled setup")
+            case .Success: println("Setup completed successfully")
+            case .Failure: println("Setup failed")
+            case .UserCancel : println("User cancelled setup")
         }
         
         if device != nil
@@ -38,38 +40,9 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
     }
     
     
-//    
-//    -(void)checkFontNames
-//    {
-//        for (NSString* family in [UIFont familyNames])
-//        {
-//            NSLog(@"%@", family);
-//    
-//            for (NSString* name in [UIFont fontNamesForFamilyName: family])
-//            {
-//                NSLog(@"  %@", name);
-//            }
-//        }
-//    }
-
-    
-    func checkFontNames()
-    {
-        for family in UIFont.familyNames()
-        {
-            print("\(family)\n")
-            for name in UIFont.fontNamesForFamilyName(family as! String)
-            {
-                print("   \(name)\n")
-            }
-            
-        }
-    }
-    
-    
     func customizeSetup()
     {
-        self.checkFontNames()
+        // Do customization for Spark Setup wizard UI
         let c = SparkSetupCustomization.sharedInstance()
         c.brandImage = UIImage(named: "brand-logo-head")
         c.brandName = "Acme"
@@ -81,13 +54,15 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
 
         c.normalTextFontName = "Skater Girls Rock"
         c.boldTextFontName = "CheriLiney"
-        c.fontSizeOffset = 2;
+        c.fontSizeOffset = 1;
     }
     
     @IBAction func startButtonTapped(sender: UIButton)
     {
-//        self.customizeSetup()
+        // Remove this line to revert to standard "Unbranded" Spark Setup app
+        self.customizeSetup()
         
+        // lines required for invoking the Spark Setup wizard
         if let vc = SparkSetupMainController()
         {
             vc.delegate = self
