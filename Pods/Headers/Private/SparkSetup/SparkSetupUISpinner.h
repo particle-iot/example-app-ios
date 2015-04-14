@@ -1,1 +1,1 @@
-../../../../../spark-setup-ios/Classes/UI/UI Elements/SparkSetupUISpinner.h
+../../../SparkSetup/Classes/UI/UI Elements/SparkSetupUISpinner.h

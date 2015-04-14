@@ -1,1 +1,1 @@
-../../../../../spark-setup-ios/Classes/User/SparkSetupMainController.h
+../../../SparkSetup/Classes/User/SparkSetupMainController.h

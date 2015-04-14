@@ -276,14 +276,14 @@ NSInteger const kMaxRetriesReachability = 5;
             NSLog(@"connectAP sent");
             self.connectAPsent = YES;
             
-            while (([SparkSetupCommManager checkSparkDeviceWifiConnection]) && (self.disconnectRetries < kMaxRetriesDisconnectFromDevice))
+            while (([SparkSetupCommManager checkSparkDeviceWifiConnection:[SparkSetupCustomization sharedInstance].networkNamePrefix]) && (self.disconnectRetries < kMaxRetriesDisconnectFromDevice))
             {
                 [NSThread sleepForTimeInterval:2.0];
                 self.disconnectRetries++;
             }
             
             // are we still connected to device?
-            if ([SparkSetupCommManager checkSparkDeviceWifiConnection])
+            if ([SparkSetupCommManager checkSparkDeviceWifiConnection:[SparkSetupCustomization sharedInstance].networkNamePrefix])
             {
                 if (self.connectAPRetries++ >= kMaxRetriesConnectAP)
                 {
@@ -337,7 +337,7 @@ NSInteger const kMaxRetriesReachability = 5;
     {
         for (int i=0; i<kMaxRetriesReachability-1; i++)
         {
-            if (![SparkSetupCommManager checkSparkDeviceWifiConnection])
+            if (![SparkSetupCommManager checkSparkDeviceWifiConnection:[SparkSetupCustomization sharedInstance].networkNamePrefix])
             {
                 [[SparkCloud sharedInstance] getDevices:^(NSArray *devices, NSError *error) {
                     NSLog(@"getDevices completed - to wake radio up");

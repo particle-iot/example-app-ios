@@ -1,1 +1,1 @@
-../../../../../spark-setup-ios/Classes/User/SparkSetupCustomization.h
+../../../SparkSetup/Classes/User/SparkSetupCustomization.h

@@ -140,7 +140,7 @@
 -(void)checkDeviceWifiConnection:(id)sender
 {
 //    printf("Detect device timer\n");
-    if ([SparkSetupCommManager checkSparkDeviceWifiConnection])
+    if ([SparkSetupCommManager checkSparkDeviceWifiConnection:[SparkSetupCustomization sharedInstance].networkNamePrefix])
     {
         [self.checkConnectionTimer invalidate];
         

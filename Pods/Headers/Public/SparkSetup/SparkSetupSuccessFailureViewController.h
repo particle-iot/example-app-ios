@@ -1,1 +1,1 @@
-../../../../../spark-setup-ios/Classes/UI/SparkSetupSuccessFailureViewController.h
+../../../SparkSetup/Classes/UI/SparkSetupSuccessFailureViewController.h

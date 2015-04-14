@@ -138,7 +138,7 @@
 -(void)checkPhotonConnection:(id)sender
 {
 //    NSLog(@"checkPhotonConnection");
-    if (![SparkSetupCommManager checkSparkDeviceWifiConnection])
+    if (![SparkSetupCommManager checkSparkDeviceWifiConnection:[SparkSetupCustomization sharedInstance].networkNamePrefix])
     {
         [self.checkConnectionTimer invalidate];
         [self.navigationController popViewControllerAnimated:YES];

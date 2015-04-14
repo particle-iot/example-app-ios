@@ -26,12 +26,24 @@ typedef NS_ENUM(NSInteger, SparkSetupWifiSecurityType) {
 
 @interface SparkSetupCommManager : NSObject
 
-//@property (nonatomic) BOOL ready;
-+(BOOL)checkSparkDeviceWifiConnection;
+/**
+ *  Check if currently connected wifi is the Soft AP device wi-fi network
+ *
+ *  @param networkPrefix Device Soft AP SSID prefix
+ *
+ *  @return YES if connected, NO otherwise
+ */
++(BOOL)checkSparkDeviceWifiConnection:(NSString *)networkPrefix;
 
-//-(instancetype)initWithConnection:(SparkSetupConnection *)connection;
+/**
+ *  Use to initialize comm manager
+ *
+ *  @param networkPrefix Device Soft AP SSID prefix
+ *
+ *  @return Initialized comm manager or bil if error
+ */
+-(instancetype)initWithNetworkPrefix:(NSString *)networkPrefix;
 
--(instancetype)init NS_DESIGNATED_INITIALIZER;
 
 -(void)version:(void(^)(id version, NSError *error))completion;
 -(void)deviceID:(void(^)(id responseDict, NSError *error))completion;

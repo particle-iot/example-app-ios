@@ -11,7 +11,7 @@
 #import "SparkSetupCommManager.h"
 #import "SparkSetupConnection.h"
 #import <SystemConfiguration/CaptiveNetwork.h>
-#import "SparkSetupCustomization.h"
+//#import "SparkSetupCustomization.h"
 #import "SparkSetupSecurityManager.h"
 
 #define ENCRYPT_PWD     1
@@ -42,7 +42,6 @@ int const kSparkSetupConnectionEndpointPort = 5609;
 @property (copy)void (^commandSendBlock)(void); // code block for sending the command to socket
 @property (nonatomic, strong) NSTimer *sendCommandTimeoutTimer;
 @property (nonatomic, strong) NSString *networkNamePrefix;
-
 @end
 
 
@@ -68,9 +67,22 @@ int const kSparkSetupConnectionEndpointPort = 5609;
     return nil;
 }
 
+
+-(instancetype)initWithNetworkPrefix:(NSString *)networkPrefix
+{
+    SparkSetupCommManager *manager = [self init];
+    if (manager)
+    {
+        manager.networkNamePrefix = networkPrefix;
+        return manager;
+    }
+    else
+        return nil;
+}
+
 #pragma mark Spark photon device wifi connection detection methods
 
-+(BOOL)checkSparkDeviceWifiConnection
++(BOOL)checkSparkDeviceWifiConnection:(NSString *)networkPrefix
 {
     NSArray *ifs = (__bridge_transfer NSArray *)CNCopySupportedInterfaces();
     //    NSLog(@"Supported interfaces: %@", ifs);
@@ -83,11 +95,12 @@ int const kSparkSetupConnectionEndpointPort = 5609;
     
     NSString *SSID = info[@"SSID"];
     NSLog(@"currently connected SSID: %@",SSID);
-    if ([SSID hasPrefix:[SparkSetupCustomization sharedInstance].networkNamePrefix])
+//    if ([SSID hasPrefix:[SparkSetupCustomization sharedInstance].networkNamePrefix])
+    if ([SSID hasPrefix:networkPrefix])
     {
         return YES;
-        // add notification or delegate method
-        // add reachability change detection
+        // TODO: add notification or delegate method
+        // TODO: add reachability change detection
         
     }
     
@@ -267,10 +280,13 @@ int const kSparkSetupConnectionEndpointPort = 5609;
 
 -(BOOL)canSendCommandCallCompletionForError:(void(^)(id obj, NSError *error))completion
 {
-    if (![SparkSetupCommManager checkSparkDeviceWifiConnection])
+    if (self.networkNamePrefix)
     {
-        completion(nil, [NSError errorWithDomain:@"SparkSetupCommManangerError" code:2003 userInfo:@{NSLocalizedDescriptionKey:@"Not connected to Spark device"}]);
-        return NO;
+        if (![SparkSetupCommManager checkSparkDeviceWifiConnection:self.networkNamePrefix])
+        {
+            completion(nil, [NSError errorWithDomain:@"SparkSetupCommManangerError" code:2003 userInfo:@{NSLocalizedDescriptionKey:@"Not connected to Spark device"}]);
+            return NO;
+        }
     }
     
     if (self.commandType != SparkSetupCommandTypeNone)

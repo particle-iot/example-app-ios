@@ -42,25 +42,22 @@ NSString *const kSparkSetupDidLogoutNotification = @"kSparkSetupDidLogoutNotific
 
 +(UIStoryboard *)getSetupStoryboard
 {
-    UIStoryboard *setupStoryboard = [UIStoryboard storyboardWithName:@"setup" bundle:nil];
+    UIStoryboard *setupStoryboard = [UIStoryboard storyboardWithName:@"setup" bundle:[SparkSetupMainController getResourcesBundle]];
     return setupStoryboard;
-}
-
--(instancetype)initWithIdentifier:(NSString *)identifier// NS_DESIGNATED_INITIALIZER
-{
-    return [[SparkSetupMainController getSetupStoryboard] instantiateViewControllerWithIdentifier:identifier];
 }
 
 -(instancetype)init
 {
-    return [self initWithIdentifier:@"root"];
+    SparkSetupMainController* mainVC;
+    @try {
+        mainVC = [[SparkSetupMainController getSetupStoryboard] instantiateViewControllerWithIdentifier:@"root"];
+    }
+    @catch (NSException *exception) {
+        return nil;
+    }
+    
+    return mainVC;
 }
-
-//+(instancetype)instantiate
-//{
-//    SparkSetupMainController* mainVC = [[SparkSetupMainController getSetupStoryboard] instantiateViewControllerWithIdentifier:@"root"];
-//    return mainVC;
-//}
 
 -(void)viewDidLoad
 {

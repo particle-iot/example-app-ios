@@ -26,7 +26,13 @@ extern NSString *const kSparkSetupDidFinishDeviceKey;
 
 @protocol SparkSetupMainControllerDelegate
 @required
-// TODO: handle NSError reporting
+/**
+ *  Method will be called whenever SparkSetup wizard completes
+ *
+ *  @param controller Instance of main SparkSetup viewController
+ *  @param result     Result of setup completion - can be success, failure or user-cancelled.
+ *  @param device     SparkDevice instance in case the setup completed successfully and a SparkDevice was claimed to logged in user
+ */
 - (void)sparkSetupViewController:(SparkSetupMainController *)controller didFinishWithResult:(SparkSetupMainControllerResult)result device:(SparkDevice *)device;
 @end
 
@@ -40,13 +46,12 @@ extern NSString *const kSparkSetupDidFinishDeviceKey;
 
 /**
  *  Entry point for invoking Spark Soft AP setup wizard, use by calling this on your viewController:
- *  SparkSetupMainController *setupController = [SparkSetupMainController new];
+ *  SparkSetupMainController *setupController = [[SparkSetupMainController alloc] init]; // or [SparkSetupMainController new]
  *  [self presentViewController:setupController animated:YES completion:nil];
  *
  *  @return An inititalized SparkSetupMainController instance ready to be presented.
  */
-//+(instancetype)setupVCFromSB;
-//-(instancetype)init __attribute__((unavailable("Must use +new")));
+-(instancetype)init;
 
 /**
  *  Open setup wizard in Signup screen with a pre-filled activation code from a URL scheme which was used to open the app
@@ -56,7 +61,7 @@ extern NSString *const kSparkSetupDidFinishDeviceKey;
 -(void)showSignupWithPredefinedActivationCode:(NSString *)activationCode;
 
 /**
- *  Get default resource bundle for Spark Soft AP setup assets
+ *  Get default resource bundle for Spark Soft AP setup wizard assets
  *
  *  @return Default assets resource NSBundle instance
  */

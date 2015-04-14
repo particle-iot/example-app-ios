@@ -86,8 +86,8 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
     
     @IBAction func startButtonTapped(sender: UIButton)
     {
-        self.customizeSetup()
-
+//        self.customizeSetup()
+        
         if let vc = SparkSetupMainController()
         {
             vc.delegate = self

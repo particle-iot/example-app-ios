@@ -39,15 +39,11 @@ PODS:
   - SparkSetup/Resources (0.1.2)
 
 DEPENDENCIES:
-  - SparkSetup (from `../spark-setup-ios`)
-
-EXTERNAL SOURCES:
-  SparkSetup:
-    :path: ../spark-setup-ios
+  - SparkSetup
 
 SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
   Spark-SDK: 3edc48420c58b5cc6806448f01a57e2124ba8e09
-  SparkSetup: 082ec200aa64df35ec29373367e7c6ec121f545b
+  SparkSetup: 0e7bca0e410b98dc830fbc22dec1b801c9994cce
 
 COCOAPODS: 0.36.3
