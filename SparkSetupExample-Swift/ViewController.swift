@@ -59,8 +59,8 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
     
     @IBAction func startButtonTapped(sender: UIButton)
     {
-        // Remove this line to revert to standard "Unbranded" Spark Setup app
-        self.customizeSetup()
+        // Comment out this line to revert to standard "Unbranded" Spark Setup app
+//        self.customizeSetup()
         
         // lines required for invoking the Spark Setup wizard
         if let vc = SparkSetupMainController()
