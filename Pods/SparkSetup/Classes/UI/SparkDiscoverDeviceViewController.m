@@ -439,7 +439,7 @@
 - (IBAction)settingsButton:(id)sender
 {
 
-    BOOL canOpenSettings = (&UIApplicationOpenSettingsURLString != NULL);
+    BOOL canOpenSettings = (UIApplicationOpenSettingsURLString != NULL); // TODO: find iOS 7 solution
     if (canOpenSettings) {
         NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
         [[UIApplication sharedApplication] openURL:url];

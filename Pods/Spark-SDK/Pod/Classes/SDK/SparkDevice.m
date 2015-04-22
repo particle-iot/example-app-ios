@@ -13,12 +13,12 @@
 #define MAX_SPARK_FUNCTION_ARG_LENGTH 63
 
 @interface SparkDevice()
-@property (strong, nonatomic) NSString* ID;
+@property (strong, nonatomic) NSString* id;
 @property (nonatomic) BOOL connected; // might be impossible
 @property (strong, nonatomic) NSArray *functions;
 @property (strong, nonatomic) NSDictionary *variables;
 @property (strong, nonatomic) NSString *version;
-@property (nonatomic) SparkDeviceType type;
+//@property (nonatomic) SparkDeviceType type;
 @property (nonatomic) BOOL requiresUpdate;
 @property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
 
@@ -35,23 +35,49 @@
      
         self.requiresUpdate = NO;
         
+        if (![params[@"name"] isKindOfClass:[NSNull class]])
+            if (params[@"name"])
+                _name = params[@"name"];
+        
         if ([params[@"connected"] boolValue]==YES)
             self.connected = YES;
         else
             self.connected = NO;
         
-        self.functions = params[@"functions"];
-        self.variables = params[@"variables"];
+        if (params[@"functions"])
+            self.functions = params[@"functions"];
         
-//        self.variables =
-        self.ID = params[@"id"];
-        self.name = params[@"name"];
+        if (params[@"variables"])
+            self.variables = params[@"variables"];
         
+        _id = params[@"id"];
+        
+        if (![params[@"last_app"] isKindOfClass:[NSNull class]])
+            if (params[@"last_app"])
+                _lastApp = params[@"last_app"];
+
+        if (![params[@"last_heard"] isKindOfClass:[NSNull class]])
+        {
+            if (params[@"last_heard"])
+            {
+                NSString *dateString = params[@"last_heard"];// "2015-04-18T08:42:22.127Z"
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+                NSLocale *posix = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+                [formatter setLocale:posix];
+                _lastHeard = [formatter dateFromString:dateString];
+                NSLog(@"last heard date = %@", _lastHeard); // debug
+            }
+        }
+        
+        /*
+         // Inactive for now // TODO: re-enable when we can distinguish devices in the cloud
         if (params[@"cc3000_patch_version"]) // check for other version indication strings - ask doc
         {
             self.type = SparkDeviceTypeCore;
             self.version = (params[@"cc3000_patch_version"]);
         }
+         */
         
         if (params[@"device_needs_update"])
         {
@@ -71,6 +97,12 @@
 }
 
 
+-(void)refresh
+{
+    // TODO:
+    // do it!
+}
+
 -(void)setName:(NSString *)name
 {
     // TODO: device renaming code
@@ -79,7 +111,7 @@
 -(void)getVariable:(NSString *)variableName completion:(void(^)(id result, NSError* error))completion
 {
     // TODO: check variable name exists in list
-    NSURL *url = [self.baseURL URLByAppendingPathComponent:[NSString stringWithFormat:@"v1/devices/%@/%@", self.ID, variableName]];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:[NSString stringWithFormat:@"v1/devices/%@/%@", self.id, variableName]];
     // TODO: check response of calling a non existant function
     
     [self.manager GET:[url description] parameters:[self defaultParams] success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -109,7 +141,7 @@
 -(void)callFunction:(NSString *)functionName withArguments:(NSArray *)args completion:(void (^)(NSNumber *, NSError *))completion
 {
     // TODO: check function name exists in list
-    NSURL *url = [self.baseURL URLByAppendingPathComponent:[NSString stringWithFormat:@"v1/devices/%@/%@", self.ID, functionName]];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:[NSString stringWithFormat:@"v1/devices/%@/%@", self.id, functionName]];
     
     NSMutableDictionary *params = [self defaultParams];
     // TODO: check response of calling a non existant function
@@ -163,10 +195,10 @@
 -(void)unclaim:(void (^)(NSError *))completion
 {
 
-    NSURL *url = [self.baseURL URLByAppendingPathComponent:[NSString stringWithFormat:@"v1/devices/%@", self.ID]];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:[NSString stringWithFormat:@"v1/devices/%@", self.id]];
 
     NSMutableDictionary *params = [self defaultParams];
-    params[@"id"] = self.ID;
+    params[@"id"] = self.id;
     
     [self.manager DELETE:[url description] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (completion)
@@ -210,13 +242,18 @@
 
 -(NSString *)description
 {
-    NSString *desc = [NSString stringWithFormat:@"Spark Device\nType: %@\nID: %@\nName: %@\nConnected: %@\nVariables: %@\nFunctions: %@\nVersion: %@\nRequires update: %@\n",
-                      (self.type == SparkDeviceTypeCore) ? @"Spark Core" : @"Spark Photon",
-                      self.ID,
+    NSString *desc = [NSString stringWithFormat:@"<SparkDevice 0x%lx, type: %@, id: %@, name: %@, connected: %@, variables: %@, functions: %@, version: %@, requires update: %@, last app: %@, last heard: %@>",
+                      (unsigned long)self,
+                      /*(self.type == SparkDeviceTypeCore) ? @"Spark Core" : @"Spark Photon",*/ @"Spark device",
+                      self.id,
                       self.name,
-                      (self.connected) ? @"True" : @"False",
-                      [self.variables description], [self.functions description], self.version,
-                      (self.requiresUpdate) ? @"True" : @"False"];
+                      (self.connected) ? @"true" : @"false",
+                      self.variables,
+                      self.functions,
+                      self.version,
+                      (self.requiresUpdate) ? @"true" : @"false",
+                      self.lastApp,
+                      self.lastHeard];
     
     return desc;
     

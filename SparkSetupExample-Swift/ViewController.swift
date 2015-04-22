@@ -26,9 +26,17 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         
         switch result
         {
-            case .Success: println("Setup completed successfully")
-            case .Failure: println("Setup failed")
-            case .UserCancel : println("User cancelled setup")
+            case .Success:
+                println("Setup completed successfully")
+            case .Failure:
+                println("Setup failed")
+            case .UserCancel :
+                println("User cancelled setup")
+            case .LoggedIn :
+                println("User is logged in")
+            default:
+                println("Uknown setup error")
+            
         }
         
         if device != nil

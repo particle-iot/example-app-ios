@@ -17,9 +17,9 @@ typedef NS_ENUM(NSInteger, SparkDeviceType) {
 @interface SparkDevice : NSObject
 
 /**
- *  Device ID string
+ *  DeviceID string
  */
-@property (strong, nonatomic, readonly) NSString* ID;
+@property (strong, nonatomic, readonly) NSString* id;
 /**
  *  Device name. Device can be renamed in the cloud by setting this property. If renaming fails name will stay the same.
  */
@@ -36,12 +36,18 @@ typedef NS_ENUM(NSInteger, SparkDeviceType) {
  *  Dictionary of exposed variables on device with their respective types.
  */
 @property (strong, nonatomic, readonly) NSDictionary *variables; // @{varName : varType, ...}
+
+@property (strong, nonatomic, readonly) NSString *lastApp;
+
+@property (strong, nonatomic, readonly) NSDate *lastHeard;
+
+
 /**
  *  Device firmware version string
  */
 @property (strong, nonatomic, readonly) NSString *version;
 @property (nonatomic, readonly) BOOL requiresUpdate;
-@property (nonatomic, readonly) SparkDeviceType type;
+//@property (nonatomic, readonly) SparkDeviceType type; // inactive for now
 
 -(instancetype)initWithParams:(NSDictionary *)params NS_DESIGNATED_INITIALIZER;
 -(instancetype)init __attribute__((unavailable("Must use initWithParams:")));
@@ -67,6 +73,10 @@ typedef NS_ENUM(NSInteger, SparkDeviceType) {
 -(void)addEventHandler:(NSString *)eventName handler:(void(^)(void))handler;
 -(void)removeEventHandler:(NSString *)eventName;
  */
+
+
+// Request device refresh from cloud - update online status/function/variables/name etc
+-(void)refresh;
 
 /**
  *  Remove device from current logged in user account

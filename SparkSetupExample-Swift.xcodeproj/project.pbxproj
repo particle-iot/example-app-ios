@@ -16,19 +16,9 @@
 		50D095711AD4ACE9008EDBD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D0956F1AD4ACE9008EDBD7 /* Main.storyboard */; };
 		50D095731AD4ACE9008EDBD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D095721AD4ACE9008EDBD7 /* Images.xcassets */; };
 		50D095761AD4ACE9008EDBD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D095741AD4ACE9008EDBD7 /* LaunchScreen.xib */; };
-		50D095821AD4ACE9008EDBD7 /* SparkSetupExample_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D095811AD4ACE9008EDBD7 /* SparkSetupExample_SwiftTests.swift */; };
+		551735B8E4EEF024ED2EEEB1 /* libPods-SparkSetupExample-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA22464957BB9D63DA663AC /* libPods-SparkSetupExample-Swift.a */; };
 		AA9E27CBD0D9C0F30B8FB2D3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED513300A28B61313FA63920 /* libPods.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		50D0957C1AD4ACE9008EDBD7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 50D0955E1AD4ACE9008EDBD7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 50D095651AD4ACE9008EDBD7;
-			remoteInfo = "SparkSetupExample-Swift";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4327566CB3C778F52B87BBF1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -43,11 +33,13 @@
 		50D095701AD4ACE9008EDBD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50D095721AD4ACE9008EDBD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		50D095751AD4ACE9008EDBD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		50D0957B1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SparkSetupExample-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D095801AD4ACE9008EDBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D095811AD4ACE9008EDBD7 /* SparkSetupExample_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkSetupExample_SwiftTests.swift; sourceTree = "<group>"; };
 		50D0958F1AD4B725008EDBD7 /* SparkSetup-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = "SparkSetup-Bridging-Header.h"; sourceTree = "<group>"; };
+		64AFE41A9EE8AF64AE75FA35 /* Pods-SparkSetupExample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkSetupExample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SparkSetupExample-Swift/Pods-SparkSetupExample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		9FA22464957BB9D63DA663AC /* libPods-SparkSetupExample-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SparkSetupExample-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A648C6797549C2930F433A49 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CA8EB58E1131C68689972CA0 /* Pods-SparkSetupExample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkSetupExample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SparkSetupExample-Swift/Pods-SparkSetupExample-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		ED513300A28B61313FA63920 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -57,13 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9E27CBD0D9C0F30B8FB2D3 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		50D095781AD4ACE9008EDBD7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				551735B8E4EEF024ED2EEEB1 /* libPods-SparkSetupExample-Swift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				50D095661AD4ACE9008EDBD7 /* SparkSetupExample-Swift.app */,
-				50D0957B1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +131,8 @@
 			children = (
 				A648C6797549C2930F433A49 /* Pods.debug.xcconfig */,
 				4327566CB3C778F52B87BBF1 /* Pods.release.xcconfig */,
+				64AFE41A9EE8AF64AE75FA35 /* Pods-SparkSetupExample-Swift.debug.xcconfig */,
+				CA8EB58E1131C68689972CA0 /* Pods-SparkSetupExample-Swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -154,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				ED513300A28B61313FA63920 /* libPods.a */,
+				9FA22464957BB9D63DA663AC /* libPods-SparkSetupExample-Swift.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,24 +168,6 @@
 			productReference = 50D095661AD4ACE9008EDBD7 /* SparkSetupExample-Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		50D0957A1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 50D095881AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "SparkSetupExample-SwiftTests" */;
-			buildPhases = (
-				50D095771AD4ACE9008EDBD7 /* Sources */,
-				50D095781AD4ACE9008EDBD7 /* Frameworks */,
-				50D095791AD4ACE9008EDBD7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				50D0957D1AD4ACE9008EDBD7 /* PBXTargetDependency */,
-			);
-			name = "SparkSetupExample-SwiftTests";
-			productName = "SparkSetupExample-SwiftTests";
-			productReference = 50D0957B1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,10 +180,6 @@
 					50D095651AD4ACE9008EDBD7 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = TNJ67X9MQD;
-					};
-					50D0957A1AD4ACE9008EDBD7 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 50D095651AD4ACE9008EDBD7;
 					};
 				};
 			};
@@ -231,7 +197,6 @@
 			projectRoot = "";
 			targets = (
 				50D095651AD4ACE9008EDBD7 /* SparkSetupExample-Swift */,
-				50D0957A1AD4ACE9008EDBD7 /* SparkSetupExample-SwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,13 +213,6 @@
 				50D095761AD4ACE9008EDBD7 /* LaunchScreen.xib in Resources */,
 				50D095731AD4ACE9008EDBD7 /* Images.xcassets in Resources */,
 				5018DC171AD88B4D00ADD403 /* Skater Girls Rock.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		50D095791AD4ACE9008EDBD7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,23 +261,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50D095771AD4ACE9008EDBD7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				50D095821AD4ACE9008EDBD7 /* SparkSetupExample_SwiftTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		50D0957D1AD4ACE9008EDBD7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 50D095651AD4ACE9008EDBD7 /* SparkSetupExample-Swift */;
-			targetProxy = 50D0957C1AD4ACE9008EDBD7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		50D0956F1AD4ACE9008EDBD7 /* Main.storyboard */ = {
@@ -430,6 +372,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +397,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,40 +413,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "";
-			};
-			name = Release;
-		};
-		50D095891AD4ACE9008EDBD7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SparkSetupExample-SwiftTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SparkSetupExample-Swift.app/SparkSetupExample-Swift";
-			};
-			name = Debug;
-		};
-		50D0958A1AD4ACE9008EDBD7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SparkSetupExample-SwiftTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SparkSetupExample-Swift.app/SparkSetupExample-Swift";
 			};
 			name = Release;
 		};
@@ -523,15 +433,6 @@
 			buildConfigurations = (
 				50D095861AD4ACE9008EDBD7 /* Debug */,
 				50D095871AD4ACE9008EDBD7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		50D095881AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "SparkSetupExample-SwiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				50D095891AD4ACE9008EDBD7 /* Debug */,
-				50D0958A1AD4ACE9008EDBD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

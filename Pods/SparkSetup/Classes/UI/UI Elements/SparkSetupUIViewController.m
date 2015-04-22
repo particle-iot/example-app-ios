@@ -20,7 +20,16 @@
 #pragma mark view controller life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.view.backgroundColor = [SparkSetupCustomization sharedInstance].pageBackgroundColor;
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[SparkSetupCustomization sharedInstance].pageBackgroundImage];
+    backgroundImage.frame = [UIScreen mainScreen].bounds;
     
+    backgroundImage.contentMode = UIViewContentModeScaleToFill;
+    
+    [self.view addSubview:backgroundImage];
+    [self.view sendSubviewToBack:backgroundImage];
+
     // do customization
 }
 
@@ -28,7 +37,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.view.backgroundColor = [SparkSetupCustomization sharedInstance].pageBackgroundColor;
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];

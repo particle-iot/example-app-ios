@@ -12,7 +12,7 @@
 #import "SparkUser.h"
 #import <AFNetworking/AFNetworking.h>
 
-#define GLOBAL_API_TIMEOUT_INTERVAL     7.0f
+#define GLOBAL_API_TIMEOUT_INTERVAL     31.0f
 
 
 NSString *const kSparkAPIBaseURL = @"https://api.spark.io";
@@ -290,9 +290,16 @@ NSString *const kSparkAPIBaseURL = @"https://api.spark.io";
 }
 
 
-
-
--(void)getDevices:(void (^)(NSArray *devices, NSError *error))completion
+// return format:
+//{
+//    connected = 0;
+//    id = 54ff6b066667515140471567;
+//    "last_app" = "<null>";
+//    "last_heard" = "<null>";
+//    name = PhotonsSoldCounter;
+//},{...},{...}
+/*
+-(void)getDevicesInfo:(void (^)(NSArray *devicesInfo, NSError *error))completion
 {
     NSString *authorization = [NSString stringWithFormat:@"Bearer %@",self.token.accessToken];
     [self.manager.requestSerializer setValue:authorization forHTTPHeaderField:@"Authorization"];
@@ -301,25 +308,61 @@ NSString *const kSparkAPIBaseURL = @"https://api.spark.io";
      {
          if (completion)
          {
+             // just return the list to the user (document 
+             NSArray *devicesInfo = responseObject;
+             completion(devicesInfo, nil);
+         }
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         // check type of error?
+         if (completion)
+             completion(nil, [NSError errorWithDomain:error.domain code:operation.response.statusCode userInfo:error.userInfo]);
+//         NSLog(@"Error: %@", error.localizedDescription);
+     }];
+}
+*/
+
+
+-(void)getDevices:(void (^)(NSArray *sparkDevices, NSError *error))completion
+{
+    NSString *authorization = [NSString stringWithFormat:@"Bearer %@",self.token.accessToken];
+    [self.manager.requestSerializer setValue:authorization forHTTPHeaderField:@"Authorization"];
+    
+    [self.manager GET:@"/v1/devices" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         if (completion)
+         {
              
              NSArray *responseList = responseObject;
-             NSMutableArray *deviceIDList = [[NSMutableArray alloc] initWithCapacity:responseList.count];
+             NSMutableArray *queryDeviceIDList = [[NSMutableArray alloc] initWithCapacity:responseList.count];
              __block NSMutableArray *deviceList = [[NSMutableArray alloc] initWithCapacity:responseList.count];
              __block NSError *deviceError = nil;
              // analyze
              for (NSDictionary *deviceDict in responseList)
              {
-                 if (deviceDict[@"id"]) // ignore <null> device listings that sometimes return from /v1/devices API call
+                 if (deviceDict[@"id"])   // ignore <null> device listings that sometimes return from /v1/devices API call
                  {
                      if (![deviceDict[@"id"] isKindOfClass:[NSNull class]])
-                         [deviceIDList addObject:deviceDict[@"id"]];
+                     {
+                         if ([deviceDict[@"connected"] boolValue]==YES) // do inquiry only for online devices (otherwise we waste time on request timeouts and get no new info)
+                         {
+                             // if it's online then add it to the query list so we can get additional information about it
+                             [queryDeviceIDList addObject:deviceDict[@"id"]];
+                         }
+                         else
+                         {
+                             // if it's offline just make an instance for it with the limited data with have
+                             SparkDevice *device = [[SparkDevice alloc] initWithParams:deviceDict];
+                             [deviceList addObject:device];
+                         }
+                     }
+                     
                  }
              }
-
+             
              // iterate thru deviceList and create SparkDevice instances through query
              __block dispatch_group_t group = dispatch_group_create();
              
-             for (NSString *deviceID in deviceIDList)
+             for (NSString *deviceID in queryDeviceIDList)
              {
                  dispatch_group_enter(group);
                  [self getDevice:deviceID completion:^(SparkDevice *device, NSError *error) {
@@ -337,9 +380,9 @@ NSString *const kSparkAPIBaseURL = @"https://api.spark.io";
              dispatch_group_notify(group, dispatch_get_main_queue(), ^{
                  if (completion)
                  {
-                     if (deviceError && (deviceList.count==0)) // if some devices reported error but some not, then return at least the ones that didn't report error
+                     if (deviceError && (deviceList.count==0)) // empty list? error? report it
                          completion(nil, deviceError);
-                     else if (deviceList.count > 0)
+                     else if (deviceList.count > 0)  // if some devices reported error but some not, then return at least the ones that didn't report error, ditch error
                          completion(deviceList, nil);
                      else
                          completion(nil, nil);
@@ -353,7 +396,7 @@ NSString *const kSparkAPIBaseURL = @"https://api.spark.io";
          // check type of error?
          if (completion)
              completion(nil, [NSError errorWithDomain:error.domain code:operation.response.statusCode userInfo:error.userInfo]);
-//         NSLog(@"Error: %@", error.localizedDescription);
+         //         NSLog(@"Error: %@", error.localizedDescription);
      }];
 }
 

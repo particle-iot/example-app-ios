@@ -69,18 +69,20 @@ extern NSString *const kSparkAPIBaseURL;
 
 /**
  *  Get an array of instances of all user's claimed devices
+ *  offline devices will contain only partial data (no info about functions/variables)
  *
  *  @param completion Completion block with the device instances array in case of success or with NSError object if failure
  */
--(void)getDevices:(void(^)(NSArray *devices, NSError *error))completion;
+-(void)getDevices:(void (^)(NSArray *sparkDevices, NSError *error))completion;
 
 /**
- *  Get a specific device instance by its deviceID
+ *  Get a specific device instance by its deviceID. If the device is offline the instance will contain only partial information the cloud has cached, 
+ *  notice that the the request might also take quite some time to complete for offline devices.
  *
  *  @param deviceID   required deviceID
  *  @param completion Completion block with first arguemnt as the device instance in case of success or with second argument NSError object if operation failed
  */
--(void)getDevice:(NSString *)deviceID completion:(void(^)(SparkDevice *device, NSError *error))completion;
+-(void)getDevice:(NSString *)deviceID completion:(void (^)(SparkDevice *, NSError *))completion;
 
 // Not available yet
 //-(void)publishEvent:(NSString *)eventName data:(NSData *)data;
@@ -111,12 +113,12 @@ extern NSString *const kSparkAPIBaseURL;
 -(void)requestPasswordReset:(NSString *)orgName email:(NSString *)email completion:(void(^)(NSError *))completion;
 
 /**
- *  Change password for user // TODO: should it be for currently logged in user?
+ *  Change password for user
  *
  *  @param user       user email
  *  @param password   new password
  *  @param completion Completion block with NSError object if failure, nil if success
  */
-//-(void)changePasswordForUser:(NSString *)user toPassword:(NSString *)password completion:(void (^)(NSError *error))completion;
+
 
 @end

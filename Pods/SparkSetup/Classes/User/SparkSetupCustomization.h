@@ -42,6 +42,7 @@
 @property (nonatomic, strong) NSString *troubleshootingHTMLFile; // Static HTML for troubleshooting text of the app/device usage
 
 @property (nonatomic, strong) UIColor *pageBackgroundColor;
+@property (nonatomic, strong) UIImage *pageBackgroundImage;
 @property (nonatomic, strong) UIColor *normalTextColor;
 @property (nonatomic, strong) UIColor *linkTextColor;
 @property (nonatomic, strong) UIColor *errorTextColor;
