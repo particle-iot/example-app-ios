@@ -1,1 +1,1 @@
-../../../SparkSetup/Classes/UI/SparkGetReadyViewController.h
+../../../../../spark-setup-ios/Classes/UI/SparkGetReadyViewController.h

@@ -1,1 +1,1 @@
-../../../SparkSetup/Classes/UI/UI Elements/SparkSetupUIButton.h
+../../../../../spark-setup-ios/Classes/UI/UI Elements/SparkSetupUIButton.h

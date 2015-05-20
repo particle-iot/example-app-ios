@@ -1,1 +1,1 @@
-pod "SparkSetup"
+pod "SparkSetup", :path => "../spark-setup-ios"

@@ -1,1 +1,1 @@
-../../../SparkSetup/Classes/SparkSetup.h
+../../../../../spark-setup-ios/Classes/SparkSetup.h

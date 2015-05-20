@@ -1,1 +1,1 @@
-../../../SparkSetup/Classes/Comm/Reachability.h
+../../../../../spark-setup-ios/Classes/Comm/Reachability.h

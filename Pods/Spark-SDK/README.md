@@ -6,7 +6,7 @@
 (Update link)
 [![Build Status](https://travis-ci.org/AFNetworking/AFNetworking.svg)](https://travis-ci.org/Spark-SDK/Spark-SDK)
 -->
-# Spark iOS Cloud SDK 
+# Spark iOS Cloud SDK (beta)
 The Spark iOS Cloud SDK enables iOS apps to interact with Spark-powered connected products via the Spark Cloud.
 Library will allow you to easily manage active user sessions to Spark cloud, query for device info,
 read and write data to/from Spark Core/Photon devices and (via exposed variables and functions)
@@ -17,11 +17,11 @@ publish and subscribe events to/from the cloud or to/from devices (coming soon).
 - [Download Spark iOS Cloud SDK](https://github.com/spark/spark-sdk-ios/archive/master.zip) and try out the included iOS example app
 - Or perform the installation step described under the **Installation** section below
 
-## Usage and documentation
+## Usage
 
 _Full documentation coming soon_
 
-Meanahile you can look [here](http://cocoadocs.org/docsets/Spark-SDK/) or consult the javadoc style comments in `SparkCloud.h` and `SparkDevice.h` for each public method.
+Meanahile you can check out the [Reference in Cocoadocs website](http://cocoadocs.org/docsets/Spark-SDK/) or consult the javadoc style comments in `SparkCloud.h` and `SparkDevice.h` for each public method.
 If Spark iOS Cloud SDK installation completed successfully - you should be able to press `Esc` to get an auto-complete hints from XCode for each cloud and device method.
 
 ## Communication
@@ -49,10 +49,9 @@ also be sure the check out [Apple documentation](https://developer.apple.com/lib
 _Notice_ that we've included the required bridging header file in the SDK, you just need to copy it to your project add it as the active bridging header file in the project settings as described in the link above.
 We also have an example app [here](https://github.com/spark/spark-setup-ios-example), this app also demonstrates the Spark DeviceSetup library usage
 
-## Author
+## Maintainers
 
-Ido K, ido@spark.io  
-Spark
+- [Ido Kleinman](https:/www.github.com/idokleinman)
 
 ## License
 

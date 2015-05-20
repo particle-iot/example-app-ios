@@ -1,1 +1,1 @@
-../../../SparkSetup/Classes/UI/SparkUserLoginViewController.h
+../../../../../spark-setup-ios/Classes/UI/SparkUserLoginViewController.h

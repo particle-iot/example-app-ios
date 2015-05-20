@@ -1806,8 +1806,7 @@
                                                             <exclude reference="Nsl-NJ-xqf"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="287" y="9" width="26" height="26"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="CjU-Uj-l5K"/>
                                                             <include reference="Nsl-NJ-xqf"/>
@@ -1827,8 +1826,7 @@
                                                             <exclude reference="6uQ-KH-gVe"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="24" y="11" width="232" height="22"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="6uQ-KH-gVe"/>
                                                         </mask>
@@ -1846,8 +1844,7 @@
                                                             <exclude reference="TZM-FV-5Hk"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="259" y="9" width="26" height="26"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="PWe-LU-QKp"/>
                                                             <include reference="TZM-FV-5Hk"/>

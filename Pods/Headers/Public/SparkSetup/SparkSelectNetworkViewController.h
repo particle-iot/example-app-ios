@@ -1,1 +1,1 @@
-../../../SparkSetup/Classes/UI/SparkSelectNetworkViewController.h
+../../../../../spark-setup-ios/Classes/UI/SparkSelectNetworkViewController.h

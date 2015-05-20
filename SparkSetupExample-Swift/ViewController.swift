@@ -77,6 +77,98 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
             self.presentViewController(vc, animated: true, completion: nil)
         }
     }
+    
+    func example()
+    {
+        // logging in
+        SparkCloud.sharedInstance().loginWithUser("ido@particle.io", password: "userpass") { (error:NSError!) -> Void in
+            if let e=error
+            {
+                println("Wrong credentials or no internet connectivity, please try again")
+            }
+            else
+            {
+                println("Logged in")
+            }
+        }
+        
+        // get specific device by name:
+        var myPhoton : SparkDevice? = nil
+        SparkCloud.sharedInstance().getDevices { (sparkDevices:[AnyObject]!, error:NSError!) -> Void in
+            if let e=error
+            {
+                println("Check your internet connectivity")
+            }
+            else
+            {
+                if let devices = sparkDevices as? [SparkDevice]
+                {
+                    for device in devices
+                    {
+                        if device.name == "myNewPhotonName"
+                        {
+                            myPhoton = device
+                        }
+                        
+                    }
+                }
+            }
+        }
+        
+        // reading a variable
+        myPhoton!.getVariable("temprature", completion: { (result:AnyObject!, error:NSError!) -> Void in
+            if let e=error
+            {
+                println("Failed reading temprature from device")
+            }
+            else
+            {
+                if let res = result as? Float
+                {
+                    println("Room temprature is \(res) degrees")
+                }
+            }
+        })
+        
+        
+        // calling a function
+        let funcArgs = ["D7",1]
+        myPhoton!.callFunction("digitalwrite", withArguments: funcArgs) { (resultCode : NSNumber!, error : NSError!) -> Void in
+            if (error == nil) {
+                println("LED on D7 successfully turned on")
+            }
+        }
+        
+        // get device variables and functions
+        let myDeviceVariables : Dictionary? = myPhoton!.variables as? Dictionary<String,String>
+        println("MyDevice first Variable is called \(myDeviceVariables!.keys.first) and is from type \(myDeviceVariables?.values.first)")
+
+        let myDeviceFunction = myPhoton!.functions
+        println("MyDevice first function is called \(myDeviceFunction!.first)")
+
+        // get a device instance by ID
+        var myOtherDevice : SparkDevice? = nil
+        SparkCloud.sharedInstance().getDevice("53fa73265066544b16208184", completion: { (device:SparkDevice!, error:NSError!) -> Void in
+            if let d = device {
+                myOtherDevice = d
+            }
+        })
+
+        // rename a device
+        myPhoton!.name = "myNewDeviceName"
+            // or:
+        myPhoton!.rename("myNewDeviceName", completion: { (error:NSError!) -> Void in
+            if (error == nil) {
+                println("Device successfully renamed")
+            }
+            
+        })
+
+        // logout
+        SparkCloud.sharedInstance().logout()
+        
+
+    }
 
     
 }

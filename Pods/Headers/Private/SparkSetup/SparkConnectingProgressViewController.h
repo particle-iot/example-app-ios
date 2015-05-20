@@ -1,1 +1,1 @@
-../../../SparkSetup/Classes/UI/SparkConnectingProgressViewController.h
+../../../../../spark-setup-ios/Classes/UI/SparkConnectingProgressViewController.h

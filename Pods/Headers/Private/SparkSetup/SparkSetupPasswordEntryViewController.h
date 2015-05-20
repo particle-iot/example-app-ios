@@ -1,1 +1,1 @@
-../../../SparkSetup/Classes/UI/SparkSetupPasswordEntryViewController.h
+../../../../../spark-setup-ios/Classes/UI/SparkSetupPasswordEntryViewController.h

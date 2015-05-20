@@ -52,41 +52,41 @@
 #define COCOAPODS_POD_AVAILABLE_Spark_SDK
 #define COCOAPODS_VERSION_MAJOR_Spark_SDK 0
 #define COCOAPODS_VERSION_MINOR_Spark_SDK 2
-#define COCOAPODS_VERSION_PATCH_Spark_SDK 2
+#define COCOAPODS_VERSION_PATCH_Spark_SDK 7
 
 // Spark-SDK/Helpers
 #define COCOAPODS_POD_AVAILABLE_Spark_SDK_Helpers
 #define COCOAPODS_VERSION_MAJOR_Spark_SDK_Helpers 0
 #define COCOAPODS_VERSION_MINOR_Spark_SDK_Helpers 2
-#define COCOAPODS_VERSION_PATCH_Spark_SDK_Helpers 2
+#define COCOAPODS_VERSION_PATCH_Spark_SDK_Helpers 7
 
 // Spark-SDK/SDK
 #define COCOAPODS_POD_AVAILABLE_Spark_SDK_SDK
 #define COCOAPODS_VERSION_MAJOR_Spark_SDK_SDK 0
 #define COCOAPODS_VERSION_MINOR_Spark_SDK_SDK 2
-#define COCOAPODS_VERSION_PATCH_Spark_SDK_SDK 2
+#define COCOAPODS_VERSION_PATCH_Spark_SDK_SDK 7
 
 // SparkSetup
 #define COCOAPODS_POD_AVAILABLE_SparkSetup
 #define COCOAPODS_VERSION_MAJOR_SparkSetup 0
 #define COCOAPODS_VERSION_MINOR_SparkSetup 1
-#define COCOAPODS_VERSION_PATCH_SparkSetup 3
+#define COCOAPODS_VERSION_PATCH_SparkSetup 4
 
 // SparkSetup/Comm
 #define COCOAPODS_POD_AVAILABLE_SparkSetup_Comm
 #define COCOAPODS_VERSION_MAJOR_SparkSetup_Comm 0
 #define COCOAPODS_VERSION_MINOR_SparkSetup_Comm 1
-#define COCOAPODS_VERSION_PATCH_SparkSetup_Comm 3
+#define COCOAPODS_VERSION_PATCH_SparkSetup_Comm 4
 
 // SparkSetup/Core
 #define COCOAPODS_POD_AVAILABLE_SparkSetup_Core
 #define COCOAPODS_VERSION_MAJOR_SparkSetup_Core 0
 #define COCOAPODS_VERSION_MINOR_SparkSetup_Core 1
-#define COCOAPODS_VERSION_PATCH_SparkSetup_Core 3
+#define COCOAPODS_VERSION_PATCH_SparkSetup_Core 4
 
 // SparkSetup/Resources
 #define COCOAPODS_POD_AVAILABLE_SparkSetup_Resources
 #define COCOAPODS_VERSION_MAJOR_SparkSetup_Resources 0
 #define COCOAPODS_VERSION_MINOR_SparkSetup_Resources 1
-#define COCOAPODS_VERSION_PATCH_SparkSetup_Resources 3
+#define COCOAPODS_VERSION_PATCH_SparkSetup_Resources 4
 

@@ -20,30 +20,34 @@ PODS:
   - AFNetworking/UIKit (2.5.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Spark-SDK (0.2.2):
-    - Spark-SDK/Helpers (= 0.2.2)
-    - Spark-SDK/SDK (= 0.2.2)
-  - Spark-SDK/Helpers (0.2.2)
-  - Spark-SDK/SDK (0.2.2):
+  - Spark-SDK (0.2.7):
+    - Spark-SDK/Helpers (= 0.2.7)
+    - Spark-SDK/SDK (= 0.2.7)
+  - Spark-SDK/Helpers (0.2.7)
+  - Spark-SDK/SDK (0.2.7):
     - AFNetworking
     - Spark-SDK/Helpers
-  - SparkSetup (0.1.3):
-    - SparkSetup/Comm (= 0.1.3)
-    - SparkSetup/Core (= 0.1.3)
-    - SparkSetup/Resources (= 0.1.3)
-  - SparkSetup/Comm (0.1.3)
-  - SparkSetup/Core (0.1.3):
+  - SparkSetup (0.1.4):
+    - SparkSetup/Comm (= 0.1.4)
+    - SparkSetup/Core (= 0.1.4)
+    - SparkSetup/Resources (= 0.1.4)
+  - SparkSetup/Comm (0.1.4)
+  - SparkSetup/Core (0.1.4):
     - Spark-SDK
     - SparkSetup/Comm
     - SparkSetup/Resources
-  - SparkSetup/Resources (0.1.3)
+  - SparkSetup/Resources (0.1.4)
 
 DEPENDENCIES:
-  - SparkSetup
+  - SparkSetup (from `../spark-setup-ios`)
+
+EXTERNAL SOURCES:
+  SparkSetup:
+    :path: ../spark-setup-ios
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
-  Spark-SDK: c55351bc8c701a5e91c7ee34a6a235d4b22aaaad
-  SparkSetup: 8ee0bd1a10324cd4bb48162040c922d5f9a3ff2d
+  Spark-SDK: 5a7a0bfa098b841f990913f22b97bb86e61de89d
+  SparkSetup: c795683a23554f28d60c4a17b6f4fbe4643e20b6
 
 COCOAPODS: 0.36.4
