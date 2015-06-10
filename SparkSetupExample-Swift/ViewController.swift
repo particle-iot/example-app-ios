@@ -74,6 +74,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         if let vc = SparkSetupMainController()
         {
             vc.delegate = self
+            vc.modalPresentationStyle = .FormSheet  // use that for iPad
             self.presentViewController(vc, animated: true, completion: nil)
         }
     }
