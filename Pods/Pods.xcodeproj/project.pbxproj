@@ -1197,6 +1197,8 @@
 		FE939D6C0ECF6143F7241C6F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AD49F1BDE18AB3FE6D6750C4 /* SparkSetupResultViewController.h */,
+				345939E5831DB0CCD8BD212A /* SparkSetupResultViewController.m */,
 				7CACC0515E73B9F36163B335 /* SparkConnectingProgressViewController.h */,
 				CA09CDEAC3EF2CE882686E89 /* SparkConnectingProgressViewController.m */,
 				B0F63CE5B916DBA70B9E6CBC /* SparkDiscoverDeviceViewController.h */,
@@ -1209,8 +1211,6 @@
 				E2B46FCC136520481FCD122F /* SparkSelectNetworkViewController.m */,
 				4BA70AF864F8E8328C3E5092 /* SparkSetupPasswordEntryViewController.h */,
 				9E38201E8E5183DCE4633376 /* SparkSetupPasswordEntryViewController.m */,
-				AD49F1BDE18AB3FE6D6750C4 /* SparkSetupResultViewController.h */,
-				345939E5831DB0CCD8BD212A /* SparkSetupResultViewController.m */,
 				477A3FCCC035AF551F4018DE /* SparkSetupWebViewController.h */,
 				17FF5F667CDE7F9BF0EAAC73 /* SparkSetupWebViewController.m */,
 				F6B9699AF99B9258AB7C8BFD /* SparkUserForgotPasswordViewController.h */,

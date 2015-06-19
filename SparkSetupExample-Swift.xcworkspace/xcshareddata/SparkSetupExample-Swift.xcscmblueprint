@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "28BAA7EFD889A29FF3C11078F6D161C7EDF99BE6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "28BAA7EFD889A29FF3C11078F6D161C7EDF99BE6" : 0,
+    "4F6AF957846CE2D6AA716E4578638F181BC5B887" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "591B4FD0-DE1D-481C-B071-64BF1E667643",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "28BAA7EFD889A29FF3C11078F6D161C7EDF99BE6" : "spark-setup-ios-example",
+    "4F6AF957846CE2D6AA716E4578638F181BC5B887" : "spark-setup-ios"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SparkSetupExample-Swift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SparkSetupExample-Swift.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/spark\/spark-setup-ios-example.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "28BAA7EFD889A29FF3C11078F6D161C7EDF99BE6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/spark\/spark-setup-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4F6AF957846CE2D6AA716E4578638F181BC5B887"
+    }
+  ]
+}

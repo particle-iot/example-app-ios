@@ -152,6 +152,7 @@
 		50D0955E1AD4ACE9008EDBD7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = spark;
 				TargetAttributes = {
