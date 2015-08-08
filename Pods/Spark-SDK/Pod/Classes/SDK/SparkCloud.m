@@ -11,17 +11,26 @@
 #import "SparkAccessToken.h"
 #import "SparkUser.h"
 #import <AFNetworking/AFNetworking.h>
+#import <EventSource.h>
+#import "SparkEvent.h"
+
 
 #define GLOBAL_API_TIMEOUT_INTERVAL     31.0f
 
 
-NSString *const kSparkAPIBaseURL = @"https://api.spark.io";
+NSString *const kSparkAPIBaseURL = @"https://api.particle.io";
+
+NSString *const kEventListenersDictEventSourceKey = @"eventSource";
+NSString *const kEventListenersDictHandlerKey = @"eventHandler";
+NSString *const kEventListenersDictIDKey = @"id";
 
 @interface SparkCloud () <SparkAccessTokenDelegate>
 @property (nonatomic, strong) NSURL* baseURL;
 @property (nonatomic, strong) SparkAccessToken* token;
 @property (nonatomic, strong) SparkUser* user;
 @property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
+
+@property (nonatomic, strong) NSMutableDictionary *eventListenersDict;
 @end
 
 
@@ -58,6 +67,8 @@ NSString *const kSparkAPIBaseURL = @"https://api.spark.io";
         self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
         [self.manager.requestSerializer setTimeoutInterval:GLOBAL_API_TIMEOUT_INTERVAL];
         
+        // init event listeners internal dictionary
+        self.eventListenersDict = [NSMutableDictionary new];
         if (!self.manager)
             return nil;
     }
@@ -165,7 +176,12 @@ NSString *const kSparkAPIBaseURL = @"https://api.spark.io";
              }
              else
              {
-                 completion([self makeErrorWithDescription:@"Could not sign up" code:1004]);
+                 NSString *errorString;
+                 if (responseDict[@"errors"][0])
+                     errorString = [NSString stringWithFormat:@"Could not sign up: %@",responseDict[@"errors"][0]];
+                 else
+                     errorString = @"Error signing up";
+                 completion([self makeErrorWithDescription:errorString code:1004]);
              }
          }
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -301,8 +317,8 @@ NSString *const kSparkAPIBaseURL = @"https://api.spark.io";
          {
              
              NSArray *responseList = responseObject;
-             NSMutableArray *queryDeviceIDList = [[NSMutableArray alloc] initWithCapacity:responseList.count];
-             __block NSMutableArray *deviceList = [[NSMutableArray alloc] initWithCapacity:responseList.count];
+             NSMutableArray *queryDeviceIDList = [[NSMutableArray alloc] init];
+             __block NSMutableArray *deviceList = [[NSMutableArray alloc] init];
              __block NSError *deviceError = nil;
              // analyze
              for (NSDictionary *deviceDict in responseList)
@@ -475,6 +491,179 @@ NSString *const kSparkAPIBaseURL = @"https://api.spark.io";
 
 
 
+#pragma mark Events subsystem implementation
+-(id)subscribeToEventWithURL:(NSURL *)url handler:(SparkEventHandler)eventHandler
+{
+    if (!self.accessToken)
+    {
+        eventHandler(nil, [self makeErrorWithDescription:@"No active access token" code:1008]);
+        return nil;
+    }
 
+    // TODO: add eventHandler + source to an internal dictionary so it will be removeable later by calling removeEventListener on saved Source
+    EventSource *source = [EventSource eventSourceWithURL:url timeoutInterval:30.0f queue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0) accessToken:self.accessToken];
+    
+    //    if (eventName == nil)
+    //        eventName = @"no_name";
+    
+    // - event example -
+    // event: Temp
+    // data: {"data":"Temp1 is 41.900002 F, Temp2 is $f F","ttl":"60","published_at":"2015-01-13T01:23:12.269Z","coreid":"53ff6e066667574824151267"}
+    
+    //    [source addEventListener:@"" handler:^(Event *event) { //event name
+//    [source onMessage:
+    
+     EventSourceEventHandler handler = ^void(Event *event) {
+        if (eventHandler)
+        {
+            if (event.error)
+                eventHandler(nil, event.error);
+            else
+            {
+                // deserialize event payload into dictionary
+                NSError *error;
+                NSDictionary *jsonDict;
+                NSMutableDictionary *eventDict;
+                if (event.data)
+                {
+                    jsonDict = [NSJSONSerialization JSONObjectWithData:event.data options:0 error:&error];
+                    eventDict = [jsonDict mutableCopy];
+                }
+                
+                if ((eventDict) && (!error))
+                {
+                    if (event.name)
+                    {
+                        eventDict[@"event"] = event.name; // add event name to dict
+                    }
+                    SparkEvent *sparkEvent = [[SparkEvent alloc] initWithEventDict:eventDict];
+                    eventHandler(sparkEvent ,nil); // callback with parsed data
+                }
+                else if (error)
+                {
+                    eventHandler(nil, error);
+                }
+            }
+        }
+        
+    };
+    
+    [source onMessage:handler]; // bind the handler
+    
+    id eventListenerID = [NSUUID UUID]; // create the eventListenerID
+    self.eventListenersDict[eventListenerID] = @{kEventListenersDictHandlerKey : handler,
+                                                 kEventListenersDictEventSourceKey : source}; // save it in the internal dictionary for future unsubscribing
+    
+    return eventListenerID;
+    
+}
+
+
+-(void)unsubscribeFromEventWithID:(id)eventListenerID
+{
+    NSDictionary *eventListenerDict = [self.eventListenersDict objectForKey:eventListenerID];
+    if (eventListenerDict)
+    {
+        EventSource *source = [eventListenerDict objectForKey:kEventListenersDictEventSourceKey];
+        EventSourceEventHandler handler = [eventListenerDict objectForKey:kEventListenersDictHandlerKey];
+        [source removeEventListener:MessageEvent handler:handler];
+        [self.eventListenersDict removeObjectForKey:eventListenerID];
+    }
+}
+
+
+-(id)subscribeToAllEventsWithPrefix:(NSString *)eventNamePrefix handler:(SparkEventHandler)eventHandler
+{
+    // GET /v1/events[/:event_name]
+    NSString *endpoint;
+    if ((!eventNamePrefix) || [eventNamePrefix isEqualToString:@""])
+    {
+        endpoint = [NSString stringWithFormat:@"%@/v1/events", self.baseURL];
+    }
+    else
+    {
+        endpoint = [NSString stringWithFormat:@"%@/v1/events/%@", self.baseURL, eventNamePrefix];
+    }
+    
+    return [self subscribeToEventWithURL:[NSURL URLWithString:endpoint] handler:eventHandler];
+}
+
+
+-(id)subscribeToMyDevicesEventsWithPrefix:(NSString *)eventNamePrefix handler:(SparkEventHandler)eventHandler
+{
+    // GET /v1/devices/events[/:event_name]
+    NSString *endpoint;
+    if ((!eventNamePrefix) || [eventNamePrefix isEqualToString:@""])
+    {
+        // TODO: check
+        endpoint = [NSString stringWithFormat:@"%@/v1/devices/events", self.baseURL];
+    }
+    else
+    {
+        endpoint = [NSString stringWithFormat:@"%@/v1/devices/events/%@", self.baseURL, eventNamePrefix];
+    }
+    
+    return [self subscribeToEventWithURL:[NSURL URLWithString:endpoint] handler:eventHandler];
+    
+}
+
+-(id)subscribeToDeviceEventsWithPrefix:(NSString *)eventNamePrefix deviceID:(NSString *)deviceID handler:(SparkEventHandler)eventHandler
+{
+    // GET /v1/devices/:device_id/events[/:event_name]
+    NSString *endpoint;
+    if ((!eventNamePrefix) || [eventNamePrefix isEqualToString:@""])
+    {
+        // TODO: check
+        endpoint = [NSString stringWithFormat:@"%@/v1/devices/%@/events", self.baseURL,deviceID];
+    }
+    else
+    {
+        endpoint = [NSString stringWithFormat:@"%@/v1/devices/%@/events/%@", self.baseURL, deviceID, eventNamePrefix];
+    }
+    
+    return [self subscribeToEventWithURL:[NSURL URLWithString:endpoint] handler:eventHandler];
+}
+
+
+
+-(void)publishEventWithName:(NSString *)eventName data:(NSString *)data isPrivate:(BOOL)isPrivate ttl:(NSUInteger)ttl completion:(void (^)(NSError *))completion
+{
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    NSString *authorization = [NSString stringWithFormat:@"Bearer %@",self.token.accessToken];
+    [self.manager.requestSerializer setValue:authorization forHTTPHeaderField:@"Authorization"];
+    
+    params[@"name"]=eventName;
+    params[@"data"]=data;
+    if (isPrivate)
+        params[@"private"]=@"true";
+    else
+        params[@"private"]=@"false"; // TODO: check if needed
+    
+    params[@"ttl"] = [NSString stringWithFormat:@"%lu", (unsigned long)ttl];
+    
+    [self.manager POST:@"/v1/devices/events" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (completion)
+        {
+            // TODO: check server response for that
+            NSDictionary *responseDict = responseObject;
+           if ([responseDict[@"ok"] boolValue]==NO)
+            {
+                NSError *err = [self makeErrorWithDescription:@"Server reported error publishing event" code:1009]; 
+                completion(err);
+            }
+            else
+            {
+                completion(nil);
+            }
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         if (completion)
+             completion(error);
+     }];
+    
+    
+    
+}
 
 @end

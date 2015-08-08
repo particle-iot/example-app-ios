@@ -70,9 +70,16 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         // Comment out this line to revert to default "Unbranded" Spark Setup app
 //        self.customizeSetup()
         
+        
         // lines required for invoking the Spark Setup wizard
         if let vc = SparkSetupMainController()
         {
+            /* 
+            // check organization setup mode
+            let c = SparkSetupCustomization.sharedInstance()
+            c.organization = true
+            */
+            
             vc.delegate = self
             vc.modalPresentationStyle = .FormSheet  // use that for iPad
             self.presentViewController(vc, animated: true, completion: nil)
@@ -174,6 +181,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
 
     }
 
+    
     
 }
 

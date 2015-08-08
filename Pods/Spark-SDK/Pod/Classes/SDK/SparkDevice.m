@@ -22,7 +22,8 @@
 //@property (nonatomic) SparkDeviceType type;
 @property (nonatomic) BOOL requiresUpdate;
 @property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
-
+@property (atomic) NSInteger flashingTimeLeft;
+@property (nonatomic, strong) NSTimer *flashingTimer;
 @property (nonatomic, strong) NSURL *baseURL;
 @end
 
@@ -75,6 +76,7 @@
         {
             if (params[@"last_heard"])
             {
+                // TODO: add to utils class as POSIX time to NSDate
                 NSString *dateString = params[@"last_heard"];// "2015-04-18T08:42:22.127Z"
                 NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
                 [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
@@ -325,7 +327,7 @@
 {
     NSString *desc = [NSString stringWithFormat:@"<SparkDevice 0x%lx, type: %@, id: %@, name: %@, connected: %@, variables: %@, functions: %@, version: %@, requires update: %@, last app: %@, last heard: %@>",
                       (unsigned long)self,
-                      /*(self.type == SparkDeviceTypeCore) ? @"Spark Core" : @"Spark Photon",*/ @"Spark device",
+                      (self.type == SparkDeviceTypeCore) ? @"Core" : @"Photon",
                       self.id,
                       self.name,
                       (self.connected) ? @"true" : @"false",
@@ -338,6 +340,131 @@
     
     return desc;
     
+}
+
+
+-(void)flashKnownApp:(NSString *)knownAppName completion:(void (^)(NSError *))completion
+{
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:[NSString stringWithFormat:@"v1/devices/%@", self.id]];
+    
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    params[@"app"] = knownAppName;
+    [self setAuthHeaderWithAccessToken];
+    
+    [self.manager PUT:[url description] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *responseDict = responseObject;
+        if (responseDict[@"errors"])
+        {
+            if (completion) completion([self makeErrorWithDescription:responseDict[@"errors"][@"error"] code:1005]);
+        }
+        else
+            if (completion) completion(nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         if (completion) // TODO: better erroring handling
+             completion(error);
+     }];
+    
+    
+}
+
+
+-(void)flashFiles:(NSDictionary *)filesDict completion:(void (^)(NSError *))completion // binary
+{
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:[NSString stringWithFormat:@"v1/devices/%@", self.id]];
+    
+    [self setAuthHeaderWithAccessToken];
+    
+    NSError *reqError;
+    NSMutableURLRequest *request = [self.manager.requestSerializer multipartFormRequestWithMethod:@"PUT" URLString:url.description parameters:@{@"file_type" : @"binary"} constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        // check this:
+        for (NSString *key in filesDict.allKeys)
+        {
+//            [formData appendPartWithFormData:filesDict[key] name:key];
+            [formData appendPartWithFileData:filesDict[key] name:@"file" fileName:key mimeType:@"application/octet-stream"];
+        }
+    } error:&reqError];
+    
+    
+    
+    if (!reqError)
+    {
+        AFHTTPRequestOperation *operation = [self.manager HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSDictionary *responseDict = responseObject;
+//            NSLog(@"flashFiles: %@",responseDict.description);
+            if (responseDict[@"error"])
+            {
+                if (completion)
+                {
+                    completion([self makeErrorWithDescription:responseDict[@"error"] code:1004]);
+                }
+            }
+            else if (completion)
+            {
+                completion(nil);
+            }
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            if (completion) // TODO: better erroring handling
+                completion(error);
+        }];
+        
+        [self.manager.operationQueue addOperation:operation];
+
+    }
+    else
+    {
+        if (completion)
+            completion(reqError);
+    }
+    
+    
+}
+
+
+
+-(void)flashingTimeLeftTimerFunc:(NSTimer *)timer
+{
+    if (self.flashingTimeLeft > 0)
+    {
+        self.flashingTimeLeft -= 1;
+//        NSLog(@"flashingTimeLeft (0x%lx): %ld",self,(long)self.flashingTimeLeft);
+    }
+    else
+    {
+        [timer invalidate];
+    }
+}
+
+-(BOOL)isFlashing
+{
+//    NSLog(@"isFlashing (0x%lx): %ld",self,(long)self.flashingTimeLeft);
+    return (self.flashingTimeLeft > 0);
+}
+
+-(void)setIsFlashing:(BOOL)isFlashing
+{
+    // TODO: convert this to be working with a subscribe to start flash/end flash event instead of a dumb timer
+    if (isFlashing)
+    {
+        self.flashingTimeLeft = (self.type == SparkDeviceTypePhoton) ? 15 : 30;
+        self.flashingTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(flashingTimeLeftTimerFunc:) userInfo:nil repeats:YES];
+    }
+    else
+    {
+        self.flashingTimeLeft = 0;
+    }
+}
+
+
+-(id)subscribeToEventsWithPrefix:(NSString *)eventNamePrefix handler:(SparkEventHandler)eventHandler
+{
+    return [[SparkCloud sharedInstance] subscribeToDeviceEventsWithPrefix:eventNamePrefix deviceID:self.id handler:eventHandler];
+}
+
+-(void)unsubscribeFromEventWithID:(id)eventListenerID
+{
+    [[SparkCloud sharedInstance] unsubscribeFromEventWithID:eventListenerID];
 }
 
 

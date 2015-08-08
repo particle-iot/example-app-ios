@@ -1,53 +1,61 @@
 PODS:
-  - AFNetworking (2.5.3):
-    - AFNetworking/NSURLConnection (= 2.5.3)
-    - AFNetworking/NSURLSession (= 2.5.3)
-    - AFNetworking/Reachability (= 2.5.3)
-    - AFNetworking/Security (= 2.5.3)
-    - AFNetworking/Serialization (= 2.5.3)
-    - AFNetworking/UIKit (= 2.5.3)
-  - AFNetworking/NSURLConnection (2.5.3):
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.5.3):
+  - AFNetworking/NSURLSession (2.5.4):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.5.3)
-  - AFNetworking/Security (2.5.3)
-  - AFNetworking/Serialization (2.5.3)
-  - AFNetworking/UIKit (2.5.3):
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Spark-SDK (0.2.7):
-    - Spark-SDK/Helpers (= 0.2.7)
-    - Spark-SDK/SDK (= 0.2.7)
-  - Spark-SDK/Helpers (0.2.7)
-  - Spark-SDK/SDK (0.2.7):
+  - Keys (1.0.0)
+  - Spark-SDK (0.3.2):
+    - Spark-SDK/Helpers (= 0.3.2)
+    - Spark-SDK/SDK (= 0.3.2)
+  - Spark-SDK/Helpers (0.3.2)
+  - Spark-SDK/SDK (0.3.2):
     - AFNetworking
     - Spark-SDK/Helpers
-  - SparkSetup (0.1.4):
-    - SparkSetup/Comm (= 0.1.4)
-    - SparkSetup/Core (= 0.1.4)
-    - SparkSetup/Resources (= 0.1.4)
-  - SparkSetup/Comm (0.1.4)
-  - SparkSetup/Core (0.1.4):
+  - SparkSetup (0.3.0):
+    - SparkSetup/Comm (= 0.3.0)
+    - SparkSetup/Core (= 0.3.0)
+    - SparkSetup/Resources (= 0.3.0)
+  - SparkSetup/Comm (0.3.0)
+  - SparkSetup/Core (0.3.0):
     - Spark-SDK
     - SparkSetup/Comm
     - SparkSetup/Resources
-  - SparkSetup/Resources (0.1.4)
+  - SparkSetup/Resources (0.3.0)
 
 DEPENDENCIES:
-  - SparkSetup (from `../spark-setup-ios`)
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - Spark-SDK (from `../spark-sdk-ios/`)
+  - SparkSetup (from `../spark-setup-ios/`)
 
 EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+  Spark-SDK:
+    :path: ../spark-sdk-ios/
   SparkSetup:
-    :path: ../spark-setup-ios
+    :path: ../spark-setup-ios/
 
 SPEC CHECKSUMS:
-  AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
-  Spark-SDK: 5a7a0bfa098b841f990913f22b97bb86e61de89d
-  SparkSetup: c795683a23554f28d60c4a17b6f4fbe4643e20b6
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
+  Spark-SDK: c677ff87176ba1f47b732c60440a64a169781681
+  SparkSetup: 7207c7aeaf3e0093854a8e9a707c37ced2673443
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.38.2

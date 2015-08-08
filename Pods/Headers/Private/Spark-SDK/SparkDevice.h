@@ -1,1 +1,1 @@
-../../../Spark-SDK/Pod/Classes/SDK/SparkDevice.h
+../../../../../spark-sdk-ios/Pod/Classes/SDK/SparkDevice.h

@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        var keys = SparksetupexampleswiftKeys()
+        SparkCloud.sharedInstance().OAuthClientId = keys.oAuthClientId()
+        SparkCloud.sharedInstance().OAuthClientSecret = keys.oAuthSecret()
+        
         // Override point for customization after application launch.
         return true
     }

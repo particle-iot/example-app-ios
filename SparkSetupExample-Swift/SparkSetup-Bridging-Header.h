@@ -6,6 +6,6 @@
 #define _SparkSetup_Bridging_Header_h
 
 #include "SparkSetup.h"
-
+#include "SparksetupexampleswiftKeys.h"
 
 #endif

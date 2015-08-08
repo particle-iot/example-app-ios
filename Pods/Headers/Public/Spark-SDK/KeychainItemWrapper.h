@@ -1,1 +1,1 @@
-../../../Spark-SDK/Pod/Classes/Helpers/KeychainItemWrapper.h
+../../../../../spark-sdk-ios/Pod/Classes/Helpers/KeychainItemWrapper.h
