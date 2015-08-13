@@ -55,7 +55,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         c.brandImage = UIImage(named: "brand-logo-head")
         c.brandName = "Acme"
         c.brandImageBackgroundColor = UIColor(red: 0.88, green: 0.96, blue: 0.96, alpha: 0.9)
-        c.appName = "Acme Setup"
+//        c.appName = "Acme Setup"
 //        c.deviceImage = UIImage(named: "anvil")
         c.deviceName = "Connected Anvil"
         c.instructionalVideoFilename = "rr.mp4"
@@ -71,14 +71,17 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
 //        self.customizeSetup()
         
         
+
         // lines required for invoking the Spark Setup wizard
         if let vc = SparkSetupMainController()
         {
-            /* 
+            
             // check organization setup mode
             let c = SparkSetupCustomization.sharedInstance()
-            c.organization = true
-            */
+            c.allowSkipAuthentication = true
+//            c.organization = true
+//            c.organizationSlug = "spark"
+//            c.productSlug = "spark-something"
             
             vc.delegate = self
             vc.modalPresentationStyle = .FormSheet  // use that for iPad
