@@ -11,6 +11,7 @@
 		5018DC171AD88B4D00ADD403 /* Skater Girls Rock.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5018DC161AD88B4D00ADD403 /* Skater Girls Rock.ttf */; };
 		5018DC191AD88BA400ADD403 /* Agentorange.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5018DC181AD88BA400ADD403 /* Agentorange.ttf */; };
 		5018DC1B1AD88C0A00ADD403 /* Cheri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5018DC1A1AD88C0A00ADD403 /* Cheri.ttf */; };
+		50650EB71B7D397D001AE02B /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50650EB61B7D397D001AE02B /* NetworkExtension.framework */; };
 		50D0956C1AD4ACE9008EDBD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D0956B1AD4ACE9008EDBD7 /* AppDelegate.swift */; };
 		50D0956E1AD4ACE9008EDBD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D0956D1AD4ACE9008EDBD7 /* ViewController.swift */; };
 		50D095711AD4ACE9008EDBD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D0956F1AD4ACE9008EDBD7 /* Main.storyboard */; };
@@ -25,10 +26,11 @@
 		5018DC161AD88B4D00ADD403 /* Skater Girls Rock.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Skater Girls Rock.ttf"; sourceTree = "<group>"; };
 		5018DC181AD88BA400ADD403 /* Agentorange.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Agentorange.ttf; sourceTree = "<group>"; };
 		5018DC1A1AD88C0A00ADD403 /* Cheri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cheri.ttf; sourceTree = "<group>"; };
+		50650EB61B7D397D001AE02B /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		50D095661AD4ACE9008EDBD7 /* SparkSetupExample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SparkSetupExample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D0956A1AD4ACE9008EDBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D0956B1AD4ACE9008EDBD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50D0956D1AD4ACE9008EDBD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50D0956D1AD4ACE9008EDBD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		50D095701AD4ACE9008EDBD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50D095721AD4ACE9008EDBD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		50D095751AD4ACE9008EDBD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50650EB71B7D397D001AE02B /* NetworkExtension.framework in Frameworks */,
 				AA9E27CBD0D9C0F30B8FB2D3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +121,7 @@
 		A29BC9A0AA44DF6712CD050D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50650EB61B7D397D001AE02B /* NetworkExtension.framework */,
 				ED513300A28B61313FA63920 /* libPods.a */,
 				9FA22464957BB9D63DA663AC /* libPods-SparkSetupExample-Swift.a */,
 			);
