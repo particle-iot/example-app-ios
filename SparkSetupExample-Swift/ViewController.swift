@@ -79,9 +79,12 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
             // check organization setup mode
             let c = SparkSetupCustomization.sharedInstance()
             c.allowSkipAuthentication = true
-//            c.organization = true
-//            c.organizationSlug = "spark"
-//            c.productSlug = "spark-something"
+            c.organization = true
+            c.organizationSlug = "test-org"
+            c.productSlug = "test-product-10"
+            // staging test:
+            SparkCloud.sharedInstance().OAuthClientId = "ido-client-7469"
+            SparkCloud.sharedInstance().OAuthClientSecret = "249084028cac4b23afdb9baea2d8447d5da8fbb7"
             
             vc.delegate = self
             vc.modalPresentationStyle = .FormSheet  // use that for iPad
