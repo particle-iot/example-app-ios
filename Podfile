@@ -1,5 +1,5 @@
-pod "SparkSetup", :path => "../spark-setup-ios/"
-pod "Spark-SDK", :path => "../spark-sdk-ios/"
+pod "SparkSetup"
+pod "Spark-SDK"
 plugin 'cocoapods-keys', {
     :project => "SparkSetupExample-Swift",
     :keys => [
