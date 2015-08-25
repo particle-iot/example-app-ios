@@ -87,6 +87,8 @@
 		4C255A5D1CCB89158A9C82064A1A9D27 /* leftChevron.png in Resources */ = {isa = PBXBuildFile; fileRef = A9E95DE5EE0BEB0D7D96A1BB4B61DA53 /* leftChevron.png */; };
 		4D0C3BC1B65D1D43E95E38B62F9A482E /* x-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3090455127B6FB7B117AF847E652797A /* x-2.png */; };
 		4E04C85DED88CE8C6D3A5D79AE8AA4A4 /* SparkSetupSecurityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 28CFD6A7AC26558B518FD19BAFBD6819 /* SparkSetupSecurityManager.h */; };
+		505460601B8BB1CA00816378 /* SparkSetupWifiTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5054605E1B8BB1CA00816378 /* SparkSetupWifiTableViewCell.h */; };
+		505460611B8BB1CA00816378 /* SparkSetupWifiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5054605F1B8BB1CA00816378 /* SparkSetupWifiTableViewCell.m */; };
 		50595313832A04F19A69526FD7317735 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ED01E4A91E56503364FB0AD72C7042B /* AFURLRequestSerialization.h */; };
 		5110E543AE51444C5F4C222D639710FB /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = F286A71B81290056CBE5FE5F53557857 /* AppIcon29x29.png */; };
 		5153B436CABAB3F49EC965A36C8A7557 /* 3-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DBCC43F30274EFDED64A7D700437DF6 /* 3-1.png */; };
@@ -346,6 +348,8 @@
 		4C2121B2EE44E859C750D2754B95F809 /* SparkSetupPasswordEntryViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SparkSetupPasswordEntryViewController.m; sourceTree = "<group>"; };
 		4E11763F6A254E9FFBA42765C552944C /* libSparkSetup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSparkSetup.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		503A035ABE550A87CD773D503B167637 /* wifi3.imageset */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = wifi3.imageset; sourceTree = "<group>"; };
+		5054605E1B8BB1CA00816378 /* SparkSetupWifiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SparkSetupWifiTableViewCell.h; sourceTree = "<group>"; };
+		5054605F1B8BB1CA00816378 /* SparkSetupWifiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SparkSetupWifiTableViewCell.m; sourceTree = "<group>"; };
 		50C95BBE3696949B51C0AC6AFA2843DB /* spark-logo-head.imageset */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = "spark-logo-head.imageset"; sourceTree = "<group>"; };
 		51C2116294EBECF73EE168FB30819811 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
 		5368E037C03252ACC0C08DDF5908180E /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
@@ -1053,6 +1057,8 @@
 				F7972EFA0A6AA8CC6FC3F65627E5D5C7 /* SparkUserLoginViewController.m */,
 				C80161A0DE693157549965ABF3105CC6 /* SparkUserSignupViewController.h */,
 				3C8D7FFFDF45CC34DB6F1712E7BF9889 /* SparkUserSignupViewController.m */,
+				5054605E1B8BB1CA00816378 /* SparkSetupWifiTableViewCell.h */,
+				5054605F1B8BB1CA00816378 /* SparkSetupWifiTableViewCell.m */,
 				92458960D74879CEB7CF1446E16053DC /* UI Elements */,
 			);
 			path = UI;
@@ -1375,6 +1381,7 @@
 				49A27618E1CAC4471DC8EEBF430ED6D8 /* SparkUserForgotPasswordViewController.h in Headers */,
 				F487E3EC3F40B8CBD98FDF77D1DB3C8B /* SparkUserLoginViewController.h in Headers */,
 				8B28C21EDD46FEF3ECDE2066371EBDF2 /* SparkUserSignupViewController.h in Headers */,
+				505460601B8BB1CA00816378 /* SparkSetupWifiTableViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1734,6 +1741,7 @@
 				FBB3D9A4FE6EA83831EE7B8C600A1273 /* SparkSetupCustomization.m in Sources */,
 				942A14852C57C528FADA4EEB98D58D96 /* SparkSetupMainController.m in Sources */,
 				3C078D0247CC28AAEC556A93F83F0DD0 /* SparkSetupPasswordEntryViewController.m in Sources */,
+				505460611B8BB1CA00816378 /* SparkSetupWifiTableViewCell.m in Sources */,
 				2FA5AA33F50352AB0CB21ADFE2D2DD91 /* SparkSetupResultViewController.m in Sources */,
 				E88D7DC70BE81E2C912A177E7C88C09A /* SparkSetupSecurityManager.m in Sources */,
 				3BB661F6E3CDD30599A9D7F67E584132 /* SparkSetupUIButton.m in Sources */,

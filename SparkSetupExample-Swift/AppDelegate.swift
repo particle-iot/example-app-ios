@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        var keys = SparksetupexampleswiftKeys()
+        let keys = SparksetupexampleswiftKeys()
         SparkCloud.sharedInstance().OAuthClientId = keys.oAuthClientId()
         SparkCloud.sharedInstance().OAuthClientSecret = keys.oAuthSecret()
         
