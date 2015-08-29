@@ -27,15 +27,15 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         switch result
         {
             case .Success:
-                println("Setup completed successfully")
+                print("Setup completed successfully")
             case .Failure:
-                println("Setup failed")
+                print("Setup failed")
             case .UserCancel :
-                println("User cancelled setup")
+                print("User cancelled setup")
             case .LoggedIn :
-                println("User is logged in")
+                print("User is logged in")
             default:
-                println("Uknown setup error")
+                print("Uknown setup error")
             
         }
         
@@ -94,11 +94,11 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
             SparkCloud.sharedInstance().loginWithUser("ido@particle.io", password: "userpass") { (error:NSError!) -> Void in
                 if let e=error
                 {
-                    println("Wrong credentials or no internet connectivity, please try again")
+                    print("Wrong credentials or no internet connectivity, please try again")
                 }
                 else
                 {
-                    println("Logged in")
+                    print("Logged in")
                 }
             }
         }
@@ -108,7 +108,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         SparkCloud.sharedInstance().getDevices { (sparkDevices:[AnyObject]!, error:NSError!) -> Void in
             if let e=error
             {
-                println("Check your internet connectivity")
+                print("Check your internet connectivity")
             }
             else
             {
@@ -130,13 +130,13 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         myPhoton!.getVariable("temprature", completion: { (result:AnyObject!, error:NSError!) -> Void in
             if let e=error
             {
-                println("Failed reading temprature from device")
+                print("Failed reading temprature from device")
             }
             else
             {
                 if let res = result as? Float
                 {
-                    println("Room temprature is \(res) degrees")
+                    print("Room temprature is \(res) degrees")
                 }
             }
         })
@@ -146,16 +146,16 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         let funcArgs = ["D7",1]
         myPhoton!.callFunction("digitalwrite", withArguments: funcArgs) { (resultCode : NSNumber!, error : NSError!) -> Void in
             if (error == nil) {
-                println("LED on D7 successfully turned on")
+                print("LED on D7 successfully turned on")
             }
         }
         
         // get device variables and functions
         let myDeviceVariables : Dictionary? = myPhoton!.variables as? Dictionary<String,String>
-        println("MyDevice first Variable is called \(myDeviceVariables!.keys.first) and is from type \(myDeviceVariables?.values.first)")
+        print("MyDevice first Variable is called \(myDeviceVariables!.keys.first) and is from type \(myDeviceVariables?.values.first)")
 
         let myDeviceFunction = myPhoton!.functions
-        println("MyDevice first function is called \(myDeviceFunction!.first)")
+        print("MyDevice first function is called \(myDeviceFunction!.first)")
 
         // get a device instance by ID
         var myOtherDevice : SparkDevice? = nil
@@ -170,7 +170,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
             // or:
         myPhoton!.rename("myNewDeviceName", completion: { (error:NSError!) -> Void in
             if (error == nil) {
-                println("Device successfully renamed")
+                print("Device successfully renamed")
             }
             
         })
