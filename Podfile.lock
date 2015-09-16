@@ -29,17 +29,17 @@ PODS:
   - Spark-SDK/SDK (0.3.2):
     - AFNetworking
     - Spark-SDK/Helpers
-  - SparkSetup (0.3.1):
-    - SparkSetup/Comm (= 0.3.1)
-    - SparkSetup/Core (= 0.3.1)
-    - SparkSetup/Resources (= 0.3.1)
-  - SparkSetup/Comm (0.3.1):
+  - SparkSetup (0.3.2):
+    - SparkSetup/Comm (= 0.3.2)
+    - SparkSetup/Core (= 0.3.2)
+    - SparkSetup/Resources (= 0.3.2)
+  - SparkSetup/Comm (0.3.2):
     - FastSocket
-  - SparkSetup/Core (0.3.1):
+  - SparkSetup/Core (0.3.2):
     - Spark-SDK
     - SparkSetup/Comm
     - SparkSetup/Resources
-  - SparkSetup/Resources (0.3.1)
+  - SparkSetup/Resources (0.3.2)
 
 DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
@@ -59,6 +59,6 @@ SPEC CHECKSUMS:
   FastSocket: 0fa2716071517078d67ead1378d34af443bd54c4
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   Spark-SDK: c677ff87176ba1f47b732c60440a64a169781681
-  SparkSetup: 49e6ddb784345dffd6f3587118964ac96bd694f6
+  SparkSetup: d9e270bee695446da8ba55513a91b3861c40f8cd
 
 COCOAPODS: 0.38.2

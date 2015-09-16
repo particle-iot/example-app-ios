@@ -15,7 +15,6 @@
 		50D0956C1AD4ACE9008EDBD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D0956B1AD4ACE9008EDBD7 /* AppDelegate.swift */; };
 		50D0956E1AD4ACE9008EDBD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D0956D1AD4ACE9008EDBD7 /* ViewController.swift */; };
 		50D095711AD4ACE9008EDBD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D0956F1AD4ACE9008EDBD7 /* Main.storyboard */; };
-		50D095731AD4ACE9008EDBD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D095721AD4ACE9008EDBD7 /* Images.xcassets */; };
 		50D095761AD4ACE9008EDBD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D095741AD4ACE9008EDBD7 /* LaunchScreen.xib */; };
 		AA9E27CBD0D9C0F30B8FB2D3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED513300A28B61313FA63920 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -156,6 +155,9 @@
 		50D0955E1AD4ACE9008EDBD7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = spark;
@@ -194,7 +196,6 @@
 				50D095711AD4ACE9008EDBD7 /* Main.storyboard in Resources */,
 				5018DC191AD88BA400ADD403 /* Agentorange.ttf in Resources */,
 				50D095761AD4ACE9008EDBD7 /* LaunchScreen.xib in Resources */,
-				50D095731AD4ACE9008EDBD7 /* Images.xcassets in Resources */,
 				5018DC171AD88B4D00ADD403 /* Skater Girls Rock.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +371,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -395,6 +397,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
