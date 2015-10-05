@@ -369,6 +369,7 @@
 				INFOPLIST_FILE = "SparkSetupExample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.spark.SparkSetupExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -395,6 +396,7 @@
 				INFOPLIST_FILE = "SparkSetupExample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.spark.SparkSetupExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
