@@ -11,6 +11,7 @@
 		5018DC171AD88B4D00ADD403 /* Skater Girls Rock.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5018DC161AD88B4D00ADD403 /* Skater Girls Rock.ttf */; };
 		5018DC191AD88BA400ADD403 /* Agentorange.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5018DC181AD88BA400ADD403 /* Agentorange.ttf */; };
 		5018DC1B1AD88C0A00ADD403 /* Cheri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5018DC1A1AD88C0A00ADD403 /* Cheri.ttf */; };
+		5054AA1E1C0694300056D180 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D095721AD4ACE9008EDBD7 /* Images.xcassets */; };
 		50650EB71B7D397D001AE02B /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50650EB61B7D397D001AE02B /* NetworkExtension.framework */; };
 		50D0956C1AD4ACE9008EDBD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D0956B1AD4ACE9008EDBD7 /* AppDelegate.swift */; };
 		50D0956E1AD4ACE9008EDBD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D0956D1AD4ACE9008EDBD7 /* ViewController.swift */; };
@@ -139,6 +140,7 @@
 				50D095631AD4ACE9008EDBD7 /* Frameworks */,
 				50D095641AD4ACE9008EDBD7 /* Resources */,
 				8BD7C63A2C6FF522AD6DD6A1 /* Copy Pods Resources */,
+				19CB0626E8637486C453C15D /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +195,7 @@
 			files = (
 				5018DC121AD887DC00ADD403 /* rr.mp4 in Resources */,
 				5018DC1B1AD88C0A00ADD403 /* Cheri.ttf in Resources */,
+				5054AA1E1C0694300056D180 /* Images.xcassets in Resources */,
 				50D095711AD4ACE9008EDBD7 /* Main.storyboard in Resources */,
 				5018DC191AD88BA400ADD403 /* Agentorange.ttf in Resources */,
 				50D095761AD4ACE9008EDBD7 /* LaunchScreen.xib in Resources */,
@@ -203,6 +206,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		19CB0626E8637486C453C15D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4C71DBB0C5A2D3ADCBCFD9C6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
