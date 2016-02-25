@@ -91,7 +91,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         // logging in
         if SparkCloud.sharedInstance().loggedInUsername == nil
         {
-            SparkCloud.sharedInstance().loginWithUser("ido@particle.io", password: "userpass") { (error:NSError!) -> Void in
+            SparkCloud.sharedInstance().loginWithUser("ido@spark.io", password: "test123") { (error:NSError?) -> Void in
                 if let _=error
                 {
                     print("Wrong credentials or no internet connectivity, please try again")
@@ -105,7 +105,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         
         // get specific device by name:
         var myPhoton : SparkDevice? = nil
-        SparkCloud.sharedInstance().getDevices { (sparkDevices:[AnyObject]!, error:NSError!) -> Void in
+        SparkCloud.sharedInstance().getDevices { (sparkDevices:[AnyObject]?, error:NSError?) -> Void in
             if let _=error
             {
                 print("Check your internet connectivity")
@@ -116,18 +116,27 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
                 {
                     for device in devices
                     {
-                        if device.name == "myNewPhotonName"
+                        if device.name == "turtle_gerbil"
                         {
                             myPhoton = device
                         }
+                        
+                    }
+                    if (myPhoton != nil)
+                    {
+                        print("subscribing to events...");
+                        myPhoton!.subscribeToEventsWithPrefix("test", handler: { (event: SparkEvent?, error:NSError?) -> Void in
+                            print(event!.event);
+                        });
                         
                     }
                 }
             }
         }
         
+        
         // reading a variable
-        myPhoton!.getVariable("temprature", completion: { (result:AnyObject!, error:NSError!) -> Void in
+        myPhoton!.getVariable("temprature", completion: { (result:AnyObject?, error:NSError?) -> Void in
             if let _=error
             {
                 print("Failed reading temprature from device")
@@ -144,22 +153,22 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         
         // calling a function
         let funcArgs = ["D7",1]
-        myPhoton!.callFunction("digitalwrite", withArguments: funcArgs) { (resultCode : NSNumber!, error : NSError!) -> Void in
+        myPhoton!.callFunction("digitalwrite", withArguments: funcArgs) { (resultCode : NSNumber?, error : NSError?) -> Void in
             if (error == nil) {
                 print("LED on D7 successfully turned on")
             }
         }
         
         // get device variables and functions
-        let myDeviceVariables : Dictionary? = myPhoton!.variables as? Dictionary<String,String>
+        let myDeviceVariables : Dictionary? = myPhoton!.variables as Dictionary<String,String>
         print("MyDevice first Variable is called \(myDeviceVariables!.keys.first) and is from type \(myDeviceVariables?.values.first)")
 
         let myDeviceFunction = myPhoton!.functions
-        print("MyDevice first function is called \(myDeviceFunction!.first)")
+        print("MyDevice first function is called \(myDeviceFunction.first)")
 
         // get a device instance by ID
         var myOtherDevice : SparkDevice? = nil
-        SparkCloud.sharedInstance().getDevice("53fa73265066544b16208184", completion: { (device:SparkDevice!, error:NSError!) -> Void in
+        SparkCloud.sharedInstance().getDevice("53fa73265066544b16208184", completion: { (device:SparkDevice?, error:NSError?) -> Void in
             if let d = device {
                 myOtherDevice = d
             }
@@ -168,7 +177,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         // rename a device
         myPhoton!.name = "myNewDeviceName"
             // or:
-        myPhoton!.rename("myNewDeviceName", completion: { (error:NSError!) -> Void in
+        myPhoton!.rename("myNewDeviceName", completion: { (error:NSError?) -> Void in
             if (error == nil) {
                 print("Device successfully renamed")
             }
