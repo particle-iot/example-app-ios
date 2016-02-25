@@ -103,6 +103,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
             // logging in
             dispatch_group_enter(loginGroup);
+            dispatch_group_enter(deviceGroup);
             if SparkCloud.sharedInstance().loggedInUsername == nil
             {
                 let keys = SparksetupexampleswiftKeys()
@@ -126,7 +127,6 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
             // logging in
             dispatch_group_wait(loginGroup, DISPATCH_TIME_FOREVER)
-            dispatch_group_enter(deviceGroup);
             
             // get specific device by name:
             SparkCloud.sharedInstance().getDevices { (sparkDevices:[AnyObject]?, error:NSError?) -> Void in
@@ -238,6 +238,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
             dispatch_group_wait(deviceGroup, DISPATCH_TIME_FOREVER) // 5
             
             SparkCloud.sharedInstance().logout()
+            print("logged out")
         }
         
         /*
