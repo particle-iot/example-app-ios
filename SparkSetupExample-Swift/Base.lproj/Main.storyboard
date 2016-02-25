@@ -31,10 +31,26 @@
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hY5-Qm-HXn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erf-tD-z8O">
+                                <rect key="frame" x="225" y="323" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="nAm-vb-sdU"/>
+                                </constraints>
+                                <state key="normal" title="Run SDK funcs">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="runSDKFuncs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPb-eM-qrc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="OzC-P5-lUm" secondAttribute="centerX" id="8Ge-d6-Bme"/>
+                            <constraint firstItem="Erf-tD-z8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OSc-gE-UfA"/>
+                            <constraint firstItem="Erf-tD-z8O" firstAttribute="top" secondItem="OzC-P5-lUm" secondAttribute="bottom" constant="8" id="dtC-Yi-HkB"/>
                             <constraint firstAttribute="centerY" secondItem="OzC-P5-lUm" secondAttribute="centerY" id="zOH-mx-Jth"/>
                         </constraints>
                     </view>
