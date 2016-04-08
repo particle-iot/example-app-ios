@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, SparkSetupMainControllerDelegate {
 
     override func viewDidLoad() {
@@ -95,33 +96,35 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
         let loginGroup : dispatch_group_t = dispatch_group_create()
         let deviceGroup : dispatch_group_t = dispatch_group_create()
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        let deviceName = "turtle_gerbil"
+        let deviceName = "turtle_gerbil" // change to your particular device name
         let functionName = "testFunc"
         let variableName = "testVar"
         var myPhoton : SparkDevice? = nil
+        var myEventId : AnyObject?
         
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
             // logging in
             dispatch_group_enter(loginGroup);
             dispatch_group_enter(deviceGroup);
-            if SparkCloud.sharedInstance().loggedInUsername == nil
-            {
-                let keys = SparksetupexampleswiftKeys()
-                SparkCloud.sharedInstance().loginWithUser(keys.particleUsername(), password: keys.particlePassword()) { (error:NSError?) -> Void in
-                    if let _=error
-                    {
-                        print("Wrong credentials or no internet connectivity, please try again")
-                    }
-                    else
-                    {
-                        print("Logged in with user "+keys.particleUsername())
-                        dispatch_group_leave(loginGroup)
-                    }
-                }
-            } else {
-                print("Already logged in with user "+SparkCloud.sharedInstance().loggedInUsername!)
-                dispatch_group_leave(loginGroup)
+            if SparkCloud.sharedInstance().isAuthenticated {
+                print("logging out of old session")
+                SparkCloud.sharedInstance().logout()
             }
+            
+            let keys = SparksetupexampleswiftKeys()
+//            SparkCloud.sharedInstance().loginWithUser(keys.particleUsername(), password: keys.particlePassword()) { (error:NSError?) -> Void in
+            SparkCloud.sharedInstance().injectSessionAccessToken("ec05695c1b224a262f1a1e92d5fc2de912cebbe1")
+            if false {
+//                if let _=error
+//                {
+                    print("Wrong credentials or no internet connectivity, please try again")
+                }
+                else
+                {
+                    print("Logged in with user "+keys.particleUsername())
+                    dispatch_group_leave(loginGroup)
+                }
+//            }
         }
         
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
@@ -165,7 +168,7 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
 
             print("subscribing to event...");
             var gotFirstEvent : Bool = false
-            myPhoton!.subscribeToEventsWithPrefix("test", handler: { (event: SparkEvent?, error:NSError?) -> Void in
+            myEventId = myPhoton!.subscribeToEventsWithPrefix("test", handler: { (event: SparkEvent?, error:NSError?) -> Void in
                 if (!gotFirstEvent) {
                     print("Got first event: "+event!.event)
                     gotFirstEvent = true
@@ -237,7 +240,11 @@ class ViewController: UIViewController, SparkSetupMainControllerDelegate {
             // logging in
             dispatch_group_wait(deviceGroup, DISPATCH_TIME_FOREVER) // 5
             
+            if let eId = myEventId {
+                myPhoton!.unsubscribeFromEventWithID(eId)
+            }
             SparkCloud.sharedInstance().logout()
+            
             print("logged out")
         }
         

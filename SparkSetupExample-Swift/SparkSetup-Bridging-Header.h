@@ -7,5 +7,6 @@
 
 #include "SparkSetup.h"
 #include "SparksetupexampleswiftKeys.h"
+#include "Spark-SDK.h"
 
 #endif

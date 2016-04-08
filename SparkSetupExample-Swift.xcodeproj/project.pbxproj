@@ -23,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		34781DFE50583C11579A5937 /* libPods-SparkSetupExample-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SparkSetupExample-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5014ED671CB74D5000A1063E /* SparkSetup-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SparkSetup-Bridging-Header.h"; path = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h"; sourceTree = "<group>"; };
 		5018DC111AD887DC00ADD403 /* rr.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rr.mp4; sourceTree = "<group>"; };
 		5018DC161AD88B4D00ADD403 /* Skater Girls Rock.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Skater Girls Rock.ttf"; sourceTree = "<group>"; };
 		5018DC181AD88BA400ADD403 /* Agentorange.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Agentorange.ttf; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		50D0955D1AD4ACE8008EDBD7 = {
 			isa = PBXGroup;
 			children = (
+				5014ED671CB74D5000A1063E /* SparkSetup-Bridging-Header.h */,
 				506F418E1C7EA9B20027C1B9 /* SparkSetup.bundle */,
 				50D095681AD4ACE9008EDBD7 /* SparkSetupExample-Swift */,
 				50D095671AD4ACE9008EDBD7 /* Products */,
@@ -132,12 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50D095851AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "SparkSetupExample-Swift" */;
 			buildPhases = (
-				BE981F3A2C173E8F2BB51BD7 /* Check Pods Manifest.lock */,
+				BE981F3A2C173E8F2BB51BD7 /* 📦 Check Pods Manifest.lock */,
 				50D095621AD4ACE9008EDBD7 /* Sources */,
 				50D095631AD4ACE9008EDBD7 /* Frameworks */,
 				50D095641AD4ACE9008EDBD7 /* Resources */,
-				16F857BC7B2EE8A439FA08B0 /* Embed Pods Frameworks */,
-				486B6D5669C0ED8B9D3EFB51 /* Copy Pods Resources */,
+				16F857BC7B2EE8A439FA08B0 /* 📦 Embed Pods Frameworks */,
+				486B6D5669C0ED8B9D3EFB51 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,14 +206,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16F857BC7B2EE8A439FA08B0 /* Embed Pods Frameworks */ = {
+		16F857BC7B2EE8A439FA08B0 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,14 +221,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SparkSetupExample-Swift/Pods-SparkSetupExample-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		486B6D5669C0ED8B9D3EFB51 /* Copy Pods Resources */ = {
+		486B6D5669C0ED8B9D3EFB51 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,14 +236,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SparkSetupExample-Swift/Pods-SparkSetupExample-Swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BE981F3A2C173E8F2BB51BD7 /* Check Pods Manifest.lock */ = {
+		BE981F3A2C173E8F2BB51BD7 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
