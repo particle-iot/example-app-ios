@@ -32,7 +32,7 @@
 		506F418E1C7EA9B20027C1B9 /* SparkSetup.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SparkSetup.bundle; sourceTree = "<group>"; };
 		50D095661AD4ACE9008EDBD7 /* SparkSetupExample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SparkSetupExample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D0956A1AD4ACE9008EDBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50D0956B1AD4ACE9008EDBD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50D0956B1AD4ACE9008EDBD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		50D0956D1AD4ACE9008EDBD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		50D095701AD4ACE9008EDBD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50D095721AD4ACE9008EDBD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -134,12 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50D095851AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "SparkSetupExample-Swift" */;
 			buildPhases = (
-				BE981F3A2C173E8F2BB51BD7 /* 📦 Check Pods Manifest.lock */,
+				BE981F3A2C173E8F2BB51BD7 /* [CP] Check Pods Manifest.lock */,
 				50D095621AD4ACE9008EDBD7 /* Sources */,
 				50D095631AD4ACE9008EDBD7 /* Frameworks */,
 				50D095641AD4ACE9008EDBD7 /* Resources */,
-				16F857BC7B2EE8A439FA08B0 /* 📦 Embed Pods Frameworks */,
-				486B6D5669C0ED8B9D3EFB51 /* 📦 Copy Pods Resources */,
+				16F857BC7B2EE8A439FA08B0 /* [CP] Embed Pods Frameworks */,
+				486B6D5669C0ED8B9D3EFB51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,12 +160,13 @@
 					New,
 				);
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = spark;
 				TargetAttributes = {
 					50D095651AD4ACE9008EDBD7 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = TNJ67X9MQD;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -206,14 +207,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16F857BC7B2EE8A439FA08B0 /* 📦 Embed Pods Frameworks */ = {
+		16F857BC7B2EE8A439FA08B0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,34 +222,41 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SparkSetupExample-Swift/Pods-SparkSetupExample-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		486B6D5669C0ED8B9D3EFB51 /* 📦 Copy Pods Resources */ = {
+		486B6D5669C0ED8B9D3EFB51 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SparkSetupExample-Swift/Pods-SparkSetupExample-Swift-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/1PasswordExtension/OnePasswordExtensionResources.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/ParticleSetup/ParticleSetup.bundle,
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SparkSetupExample-Swift/Pods-SparkSetupExample-Swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BE981F3A2C173E8F2BB51BD7 /* 📦 Check Pods Manifest.lock */ = {
+		BE981F3A2C173E8F2BB51BD7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SparkSetupExample-Swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -298,8 +306,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -308,6 +318,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -344,8 +355,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -353,6 +366,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -363,6 +377,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 				VALIDATE_PRODUCT = YES;
@@ -393,6 +408,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -422,6 +438,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};

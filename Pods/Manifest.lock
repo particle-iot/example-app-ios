@@ -1,4 +1,5 @@
 PODS:
+  - 1PasswordExtension (1.8.4)
   - AFNetworking (3.1.0):
     - AFNetworking/NSURLSession (= 3.1.0)
     - AFNetworking/Reachability (= 3.1.0)
@@ -15,43 +16,42 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Keys (1.0.0)
-  - Spark-SDK (0.4.1):
-    - Spark-SDK/Helpers (= 0.4.1)
-    - Spark-SDK/SDK (= 0.4.1)
-  - Spark-SDK/Helpers (0.4.1)
-  - Spark-SDK/SDK (0.4.1):
+  - Particle-SDK (0.7.0):
+    - Particle-SDK/Helpers (= 0.7.0)
+    - Particle-SDK/SDK (= 0.7.0)
+  - Particle-SDK/Helpers (0.7.0)
+  - Particle-SDK/SDK (0.7.0):
     - AFNetworking (~> 3.0)
-    - Spark-SDK/Helpers
-  - SparkSetup (0.4.0):
-    - SparkSetup/Comm (= 0.4.0)
-    - SparkSetup/Core (= 0.4.0)
-    - SparkSetup/Resources (= 0.4.0)
-  - SparkSetup/Comm (0.4.0)
-  - SparkSetup/Core (0.4.0):
-    - Spark-SDK
-    - SparkSetup/Comm
-    - SparkSetup/Resources
-  - SparkSetup/Resources (0.4.0)
+    - Particle-SDK/Helpers
+  - ParticleSetup (0.8.0):
+    - ParticleSetup/Comm (= 0.8.0)
+    - ParticleSetup/Core (= 0.8.0)
+  - ParticleSetup/Comm (0.8.0)
+  - ParticleSetup/Core (0.8.0):
+    - 1PasswordExtension
+    - Particle-SDK
+    - ParticleSetup/Comm
 
 DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
-  - Spark-SDK (from `../spark-sdk-ios`)
-  - SparkSetup (from `../spark-setup-ios`)
+  - Particle-SDK (from `../particle-sdk-ios`)
+  - ParticleSetup (from `../spark-setup-ios`)
 
 EXTERNAL SOURCES:
   Keys:
     :path: Pods/CocoaPodsKeys
-  Spark-SDK:
-    :path: "../spark-sdk-ios"
-  SparkSetup:
-    :path: "../spark-setup-ios"
+  Particle-SDK:
+    :path: ../particle-sdk-ios
+  ParticleSetup:
+    :path: ../spark-setup-ios
 
 SPEC CHECKSUMS:
+  1PasswordExtension: e775a29310c65851e5a6cec1afc349ab4e334e47
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
-  Spark-SDK: e9f7713a28526157983d28c452f4f271e8496912
-  SparkSetup: 0788966f922f3852d399973b780f2c14cb7c03ee
+  Particle-SDK: d08e4a9e42c927bd997cd4817e5a01894ace4187
+  ParticleSetup: 06f3b507d70a92932f81bf1b0c00703f6807d2d9
 
-PODFILE CHECKSUM: 0cc9fa2bd03f6517f1afb2a653a883e1f6310e24
+PODFILE CHECKSUM: e6cf483b05e76c97c1b42271867d7dcf5f4a3d8d
 
-COCOAPODS: 1.0.0.beta.6
+COCOAPODS: 1.3.1
