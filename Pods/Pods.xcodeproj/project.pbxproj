@@ -78,13 +78,13 @@
 		87C57A2EE9484B8934B055EC4A9214A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0339164673A5C75C5E4018F798CE5EEE /* Foundation.framework */; };
 		8958F2453EEBAF71BFEBD78FB48986EC /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C8F0F93BBB98E160093D661F6895017D /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B4F74279CB6E32BBEDB3F0C6A4901EA /* Pods-SparkSetupExample-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DD8986DDDC43C7B359BFBEEE1E30E8 /* Pods-SparkSetupExample-Swift-dummy.m */; };
-		8F096C1DFC23F5666E56C410D213A3A9 /* SparksetupexampleswiftKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 25980EDB10275F5B2D7DB8F7DEB0D0AA /* SparksetupexampleswiftKeys.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8F096C1DFC23F5666E56C410D213A3A9 /* ParticleSetupExampleswiftKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 25980EDB10275F5B2D7DB8F7DEB0D0AA /* ParticleSetupExampleswiftKeys.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		903158692A045396106CA22C0DD13BA6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A78E5A576CDDF089002FA7301D2AD8 /* SystemConfiguration.framework */; };
 		955BE85CD91D60484BCF0C9833CA05B3 /* ParticleEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A0154A3844E804E90BA932B499BE26 /* ParticleEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95FB52CD3656F2EBEE3DFC3D585B9DA2 /* 1PasswordExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB994752040C552500C9F78B5A961D3 /* 1PasswordExtension-dummy.m */; };
 		96EDA6C44CC6EBA6D5A03C3F55EF5976 /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5409E91520A1B506979CB2EA8E978B76 /* KeychainItemWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97A86FAAD4B1AD9B3292FF6AF1D8F82B /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18654422328876091D0713B94E3AF727 /* AFNetworking-dummy.m */; };
-		99A1933C430B2CB4539760B3AE106A02 /* SparksetupexampleswiftKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F40E56F833A88647345B2C4DDADA580 /* SparksetupexampleswiftKeys.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99A1933C430B2CB4539760B3AE106A02 /* ParticleSetupExampleswiftKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F40E56F833A88647345B2C4DDADA580 /* ParticleSetupExampleswiftKeys.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A0D1DE031E6A76F8955B8027A8E8026 /* ParticleSetupUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A637D38FB3E540F40EEAB15FEB63F4AD /* ParticleSetupUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B99337B4AC2DB401FD27C7D8B014B3D /* ParticleEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9759D4CDBCDA8D6F0440CE60F3905E6F /* ParticleEvent.m */; };
 		9F5BB6B4995BA4A3B2C6AEBA6C31A6DB /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B897FBE88B35EE3E6B611079F5145C3 /* AFURLSessionManager.m */; };
@@ -232,12 +232,12 @@
 		1EE18E8ACA84D9BD129FABBE68281BED /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
 		232A59BB7D648EBF6A6D4F4CD0FDD71C /* ParticleSetupUILabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ParticleSetupUILabel.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		23FE1824964EB4D462411D75478105E2 /* OnePasswordExtensionResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnePasswordExtensionResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		25980EDB10275F5B2D7DB8F7DEB0D0AA /* SparksetupexampleswiftKeys.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SparksetupexampleswiftKeys.m; sourceTree = "<group>"; };
+		25980EDB10275F5B2D7DB8F7DEB0D0AA /* ParticleSetupExampleswiftKeys.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ParticleSetupExampleswiftKeys.m; sourceTree = "<group>"; };
 		2624FFF2F8062A16F71C8CB8EC748D53 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		27DB9916D0D3A376EF27F32044F67BBF /* ParticleSetupUIElements.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ParticleSetupUIElements.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		29C92C9FF5DFD28182380323E6635BCF /* ParticleSetupCommManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParticleSetupCommManager.h; path = Classes/Comm/ParticleSetupCommManager.h; sourceTree = "<group>"; };
 		2EEB3CD06E8B7FFE3AA0A0986ED947B1 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
-		2F40E56F833A88647345B2C4DDADA580 /* SparksetupexampleswiftKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SparksetupexampleswiftKeys.h; sourceTree = "<group>"; };
+		2F40E56F833A88647345B2C4DDADA580 /* ParticleSetupExampleswiftKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ParticleSetupExampleswiftKeys.h; sourceTree = "<group>"; };
 		2F8B28B2C335BC5687E6DF55B6D6008F /* ParticleSetupMainController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ParticleSetupMainController.h; sourceTree = "<group>"; };
 		309FF9EF612D25A0CF853699C59A8629 /* ParticleCloud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ParticleCloud.m; path = Pod/Classes/SDK/ParticleCloud.m; sourceTree = "<group>"; };
 		349E2B29AF7C0F8752425B04BEF0042B /* Pods-SparkSetupExample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SparkSetupExample-Swift.release.xcconfig"; sourceTree = "<group>"; };
@@ -750,8 +750,8 @@
 		D85345150EFA4027A999352A54669D9B /* Keys */ = {
 			isa = PBXGroup;
 			children = (
-				2F40E56F833A88647345B2C4DDADA580 /* SparksetupexampleswiftKeys.h */,
-				25980EDB10275F5B2D7DB8F7DEB0D0AA /* SparksetupexampleswiftKeys.m */,
+				2F40E56F833A88647345B2C4DDADA580 /* ParticleSetupExampleswiftKeys.h */,
+				25980EDB10275F5B2D7DB8F7DEB0D0AA /* ParticleSetupExampleswiftKeys.m */,
 				544360959F70D9CA49ADDC9A749E5A86 /* Support Files */,
 			);
 			name = Keys;
@@ -876,7 +876,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99A1933C430B2CB4539760B3AE106A02 /* SparksetupexampleswiftKeys.h in Headers */,
+				99A1933C430B2CB4539760B3AE106A02 /* ParticleSetupExampleswiftKeys.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1235,7 +1235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6549179E1C9397F2D5B3BCC79BF8D324 /* Keys-dummy.m in Sources */,
-				8F096C1DFC23F5666E56C410D213A3A9 /* SparksetupexampleswiftKeys.m in Sources */,
+				8F096C1DFC23F5666E56C410D213A3A9 /* ParticleSetupExampleswiftKeys.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

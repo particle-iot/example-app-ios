@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let keys = SparksetupexampleswiftKeys()
+        let keys = ParticleSetupExampleswiftKeys()
         ParticleCloud.sharedInstance().oAuthClientId = keys.oAuthClientId()
         ParticleCloud.sharedInstance().oAuthClientSecret = keys.oAuthSecret()
         

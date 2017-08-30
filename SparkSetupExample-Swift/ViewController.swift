@@ -116,7 +116,7 @@ class ViewController: UIViewController, ParticleSetupMainControllerDelegate {
                 ParticleCloud.sharedInstance().logout()
             }
             
-            let keys = SparksetupexampleswiftKeys()
+            let keys = ParticleSetupExampleswiftKeys()
 //            ParticleCloud.sharedInstance().loginWithUser(keys.particleUsername(), password: keys.particlePassword()) { (error:NSError?) -> Void in
             ParticleCloud.sharedInstance().injectSessionAccessToken("ec05695c1b224a262f1a1e92d5fc2de912cebbe1")
             if false {

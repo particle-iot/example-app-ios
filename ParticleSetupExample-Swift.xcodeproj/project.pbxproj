@@ -23,14 +23,14 @@
 
 /* Begin PBXFileReference section */
 		34781DFE50583C11579A5937 /* libPods-SparkSetupExample-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SparkSetupExample-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5014ED671CB74D5000A1063E /* SparkSetup-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SparkSetup-Bridging-Header.h"; path = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h"; sourceTree = "<group>"; };
+		5014ED671CB74D5000A1063E /* ParticleSetup-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ParticleSetup-Bridging-Header.h"; path = "SparkSetupExample-Swift/ParticleSetup-Bridging-Header.h"; sourceTree = "<group>"; };
 		5018DC111AD887DC00ADD403 /* rr.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rr.mp4; sourceTree = "<group>"; };
 		5018DC161AD88B4D00ADD403 /* Skater Girls Rock.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Skater Girls Rock.ttf"; sourceTree = "<group>"; };
 		5018DC181AD88BA400ADD403 /* Agentorange.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Agentorange.ttf; sourceTree = "<group>"; };
 		5018DC1A1AD88C0A00ADD403 /* Cheri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cheri.ttf; sourceTree = "<group>"; };
 		50650EB61B7D397D001AE02B /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		506F418E1C7EA9B20027C1B9 /* SparkSetup.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SparkSetup.bundle; sourceTree = "<group>"; };
-		50D095661AD4ACE9008EDBD7 /* SparkSetupExample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SparkSetupExample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D095661AD4ACE9008EDBD7 /* ParticleSetupExample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ParticleSetupExample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D0956A1AD4ACE9008EDBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D0956B1AD4ACE9008EDBD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		50D0956D1AD4ACE9008EDBD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -71,9 +71,9 @@
 		50D0955D1AD4ACE8008EDBD7 = {
 			isa = PBXGroup;
 			children = (
-				5014ED671CB74D5000A1063E /* SparkSetup-Bridging-Header.h */,
+				5014ED671CB74D5000A1063E /* ParticleSetup-Bridging-Header.h */,
 				506F418E1C7EA9B20027C1B9 /* SparkSetup.bundle */,
-				50D095681AD4ACE9008EDBD7 /* SparkSetupExample-Swift */,
+				50D095681AD4ACE9008EDBD7 /* ParticleSetupExample-Swift */,
 				50D095671AD4ACE9008EDBD7 /* Products */,
 				A29BC9A0AA44DF6712CD050D /* Frameworks */,
 				538AF7EF1F0544C8704BF616 /* Pods */,
@@ -83,12 +83,12 @@
 		50D095671AD4ACE9008EDBD7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50D095661AD4ACE9008EDBD7 /* SparkSetupExample-Swift.app */,
+				50D095661AD4ACE9008EDBD7 /* ParticleSetupExample-Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50D095681AD4ACE9008EDBD7 /* SparkSetupExample-Swift */ = {
+		50D095681AD4ACE9008EDBD7 /* ParticleSetupExample-Swift */ = {
 			isa = PBXGroup;
 			children = (
 				5018DC151AD888EB00ADD403 /* Assets */,
@@ -97,6 +97,7 @@
 				50D0956F1AD4ACE9008EDBD7 /* Main.storyboard */,
 				50D095691AD4ACE9008EDBD7 /* Supporting Files */,
 			);
+			name = "ParticleSetupExample-Swift";
 			path = "SparkSetupExample-Swift";
 			sourceTree = "<group>";
 		};
@@ -130,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50D095651AD4ACE9008EDBD7 /* SparkSetupExample-Swift */ = {
+		50D095651AD4ACE9008EDBD7 /* ParticleSetupExample-Swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50D095851AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "SparkSetupExample-Swift" */;
+			buildConfigurationList = 50D095851AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "ParticleSetupExample-Swift" */;
 			buildPhases = (
 				BE981F3A2C173E8F2BB51BD7 /* [CP] Check Pods Manifest.lock */,
 				50D095621AD4ACE9008EDBD7 /* Sources */,
@@ -145,9 +146,9 @@
 			);
 			dependencies = (
 			);
-			name = "SparkSetupExample-Swift";
+			name = "ParticleSetupExample-Swift";
 			productName = "SparkSetupExample-Swift";
-			productReference = 50D095661AD4ACE9008EDBD7 /* SparkSetupExample-Swift.app */;
+			productReference = 50D095661AD4ACE9008EDBD7 /* ParticleSetupExample-Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -170,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 50D095611AD4ACE9008EDBD7 /* Build configuration list for PBXProject "SparkSetupExample-Swift" */;
+			buildConfigurationList = 50D095611AD4ACE9008EDBD7 /* Build configuration list for PBXProject "ParticleSetupExample-Swift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -183,7 +184,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50D095651AD4ACE9008EDBD7 /* SparkSetupExample-Swift */,
+				50D095651AD4ACE9008EDBD7 /* ParticleSetupExample-Swift */,
 			);
 		};
 /* End PBXProject section */
@@ -404,10 +405,10 @@
 				INFOPLIST_FILE = "SparkSetupExample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.spark.SparkSetupExample;
+				PRODUCT_BUNDLE_IDENTIFIER = io.particle.ParticleSetupExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/ParticleSetup-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -434,10 +435,10 @@
 				INFOPLIST_FILE = "SparkSetupExample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.spark.SparkSetupExample;
+				PRODUCT_BUNDLE_IDENTIFIER = io.particle.ParticleSetupExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/SparkSetup-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SparkSetupExample-Swift/ParticleSetup-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -447,7 +448,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50D095611AD4ACE9008EDBD7 /* Build configuration list for PBXProject "SparkSetupExample-Swift" */ = {
+		50D095611AD4ACE9008EDBD7 /* Build configuration list for PBXProject "ParticleSetupExample-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50D095831AD4ACE9008EDBD7 /* Debug */,
@@ -456,7 +457,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50D095851AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "SparkSetupExample-Swift" */ = {
+		50D095851AD4ACE9008EDBD7 /* Build configuration list for PBXNativeTarget "ParticleSetupExample-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50D095861AD4ACE9008EDBD7 /* Debug */,

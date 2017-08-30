@@ -6,7 +6,7 @@
 #define _SparkSetup_Bridging_Header_h
 
 #include "ParticleSetup.h"
-#include "SparksetupexampleswiftKeys.h"
+#include "ParticleSetupExampleswiftKeys.h"
 #include "Particle-SDK.h"
 
 #endif
