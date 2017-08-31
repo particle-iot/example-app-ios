@@ -1,2 +1,3 @@
-# spark-setup-ios-example
-Example iOS app demonstrating how to use the SparkSetup Soft AP cocoapod library 
+# ios-app-example-pod
+
+Example iOS app demonstrating usage of the Particle Device Setup Library (ParticleSetup) Cocoapod Soft AP library 
