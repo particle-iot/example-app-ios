@@ -1,21 +1,20 @@
 PODS:
-  - 1PasswordExtension (1.8.4)
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - 1PasswordExtension (1.8.5)
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
-  - Keys (1.0.0)
   - Particle-SDK (0.7.0):
     - Particle-SDK/Helpers (= 0.7.0)
     - Particle-SDK/SDK (= 0.7.0)
@@ -33,25 +32,15 @@ PODS:
     - ParticleSetup/Comm
 
 DEPENDENCIES:
-  - Keys (from `Pods/CocoaPodsKeys`)
-  - Particle-SDK (from `../particle-sdk-ios`)
-  - ParticleSetup (from `../spark-setup-ios`)
-
-EXTERNAL SOURCES:
-  Keys:
-    :path: Pods/CocoaPodsKeys
-  Particle-SDK:
-    :path: ../particle-sdk-ios
-  ParticleSetup:
-    :path: ../spark-setup-ios
+  - Particle-SDK
+  - ParticleSetup
 
 SPEC CHECKSUMS:
-  1PasswordExtension: e775a29310c65851e5a6cec1afc349ab4e334e47
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
+  1PasswordExtension: 0e95bdea64ec8ff2f4f693be5467a09fac42a83d
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   Particle-SDK: d08e4a9e42c927bd997cd4817e5a01894ace4187
-  ParticleSetup: 06f3b507d70a92932f81bf1b0c00703f6807d2d9
+  ParticleSetup: 2a4dca977d9355f5401ca5a3ae817af43254725e
 
-PODFILE CHECKSUM: e6cf483b05e76c97c1b42271867d7dcf5f4a3d8d
+PODFILE CHECKSUM: 750f1baef683d8910512e28ab8c7ac64cbaea8e8
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

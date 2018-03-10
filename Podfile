@@ -1,17 +1,6 @@
-source 'https://github.com/CocoaPods/Specs.git'
+target 'ios-app-particle-setup' do
 
-platform :ios, '8.0'
+    pod "ParticleSetup"
+    pod "Particle-SDK"
 
-target 'SparkSetupExample-Swift' do 
-
-    xcodeproj 'SparkSetupExample-Swift'
-    pod "ParticleSetup", :path => "../spark-setup-ios"
-    pod "Particle-SDK", :path => "../particle-sdk-ios"
-    plugin 'cocoapods-keys', {
-        :project => "SparkSetupExample-Swift",
-        :keys => [
-        "OAuthClientId",
-        "OAuthSecret"
-        ]}
 end
-
