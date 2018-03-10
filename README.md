@@ -1,7 +1,8 @@
 # iOS-app-particle-setup
 
 Barebones Swift iOS app showcasing basic ParticleSetup / Particle-SDK cocoapods usage / getting started.
-Tools versioning used: macOS 10.13.3, XCode 9.2, Cocoapods 1.4, Particle-SDK pod 0.7, ParticleSetup pod 0.8
+
+Versioning: macOS 10.13.3, XCode 9.2 (Swift 4), Cocoapods 1.4, Particle-SDK pod 0.7, ParticleSetup pod 0.8
 
 ### How was it created?
 
@@ -9,12 +10,13 @@ Tools versioning used: macOS 10.13.3, XCode 9.2, Cocoapods 1.4, Particle-SDK pod
 1. Create Podfile with your target name and Particle pods reference (see file)
 1. Close XCode Project
 1. Open shell window and navigate to the project folder
-1. Run `pod install` (make sure your have latest [Cocoapods](https://guides.cocoapods.org/using/getting-started.html#installation)  installed), pods will be installed and new XCode workspace file will be createdand
-1. in XCode open the new <your project name>.xcworkspace
-1. Add bridging header - see file `Particle-Bridging-Header.h`  for reference.
-1. Go to project settings->build settings->Objective-C bridging header->type in `./<your project name folder>/Particle-Bridging-Header.h`
+1. Run `pod install` (make sure your have latest [Cocoapods](https://guides.cocoapods.org/using/getting-started.html#installation)  installed), pods will be installed and new XCode workspace file will be created.
+1. in XCode open the new `<your project name>.xcworkspace`
+1. Add bridging header - see file `Particle-Bridging-Header.h` for reference.
+1. Go to project settings->build settings->Objective-C bridging header->type in `./<your project name folder>/Particle-Bridging-Header.h` (or wherever file is located).
 1. Create the source code and storyboard for your app (see `ViewController.swift` and `Main.storyboard` for reference)
 1. Build and run - works on simulator and device (no need to do any modifications to Keychain settings)
+1. Click "Start setup" on the phone and onboard a new Photon to your account.
 
 ### Code
 
