@@ -2,7 +2,14 @@
 
 Barebones Swift iOS app showcasing basic ParticleSetup / Particle-SDK cocoapods usage / getting started.
 
-Versioning: macOS 10.13.3, XCode 9.2 (Swift 4), Cocoapods 1.4, Particle-SDK pod 0.7, ParticleSetup pod 0.8
+Versioning: macOS 10.13.5, XCode 9.4.1 (Swift 4), Cocoapods 1.5.3, Particle-SDK pod 0.8.1, ParticleSetup pod 0.9.0
+
+### How to run the example?
+
+1. Clone this repo
+1. Open shell window and navigate to project folder
+1. Run `pod install`
+1. Open `ios-app-particle-setup.xcworkspace` and run the project on selected device or simulator
 
 ### How was it created?
 
@@ -47,13 +54,3 @@ if device != nil
 For questions - refer to Particle mobile knowledgebase/community here: https://community.particle.io/c/mobile
 
 Good luck!
-
-
-
-
-
-
-
-
-
-
