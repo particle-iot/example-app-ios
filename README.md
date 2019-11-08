@@ -2,7 +2,7 @@
 
 Barebones Swift iOS app showcasing basic ParticleSetup / Particle-SDK cocoapods usage / getting started.
 
-Versioning: macOS 10.13.5, XCode 9.4.1 (Swift 4), Cocoapods 1.5.3, Particle-SDK pod 0.8.1, ParticleSetup pod 0.9.0
+Built using XCode 9.4.1 (Swift 4)
 
 ### How to run the example?
 
