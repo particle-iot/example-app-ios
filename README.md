@@ -1,4 +1,4 @@
-# iOS-app-particle-setup
+# iOS Example App (using cocoapods)
 
 Barebones Swift iOS app showcasing basic ParticleSetup / Particle-SDK cocoapods usage / getting started.
 
